@@ -1,6 +1,4 @@
-// =====================================
-// SKILL DATABASE
-// =====================================
+
 
 const careers = {
 
@@ -58,59 +56,63 @@ const careers = {
 };
 
 
-// =====================================
-// LEARNING RECOMMENDATIONS
-// =====================================
+
 
 const learning = {
 
-    "Python": "Learn Python fundamentals and build small projects.",
+    "Python": {
+        description: "Learn Python fundamentals and build small projects.",
+        url: "https://www.youtube.com/watch?v=rfscVS0vtbw"
+    },
 
-    "SQL": "Learn SQL basics, queries, joins and databases.",
+    "SQL": {
+        description: "Learn SQL basics, queries, joins and databases.",
+        url: "https://www.youtube.com/watch?v=HXV3zeQKqGY"
+    },
 
-    "Excel": "Learn Excel formulas, pivot tables and data analysis.",
+    "Excel": {
+        description: "Learn Excel formulas, pivot tables and data analysis.",
+        url: "https://www.youtube.com/watch?v=Vl0H-qTclOg"
+    },
 
-    "Power BI": "Learn Power BI and create interactive dashboards.",
+    "Power BI": {
+        description: "Learn Power BI and create interactive dashboards.",
+        url: "https://www.youtube.com/watch?v=I0vQ_VLZTWg"
+    },
 
-    "Statistics": "Learn probability, statistics and data interpretation.",
+    "Statistics": {
+        description: "Learn probability, statistics and data interpretation.",
+        url: "https://www.youtube.com/watch?v=xxpc-HPKN28"
+    },
 
-    "Data Visualization": "Learn charts, dashboards and visual storytelling.",
+    "HTML": {
+        description: "Learn HTML structure and semantic elements.",
+        url: "https://www.youtube.com/watch?v=pQN-pnXPaVg"
+    },
 
-    "HTML": "Learn HTML structure and semantic elements.",
+    "CSS": {
+        description: "Learn CSS layouts, Flexbox and responsive design.",
+        url: "https://www.youtube.com/watch?v=OXGznpKZ_sA"
+    },
 
-    "CSS": "Learn CSS layouts, Flexbox and responsive design.",
+    "JavaScript": {
+        description: "Learn JavaScript fundamentals and DOM manipulation.",
+        url: "https://www.youtube.com/watch?v=PkZNo7MFNFg"
+    },
 
-    "JavaScript": "Learn JavaScript fundamentals and DOM manipulation.",
+    "React": {
+        description: "Learn React components, props and state.",
+        url: "https://www.youtube.com/watch?v=SqcY0GlETPk"
+    },
 
-    "React": "Learn React components, props and state.",
-
-    "Git": "Learn Git and GitHub for version control.",
-
-    "Responsive Design": "Learn how to build websites for mobile and desktop.",
-
-    "Machine Learning": "Learn supervised and unsupervised machine learning.",
-
-    "NumPy": "Learn NumPy for numerical computing.",
-
-    "Pandas": "Learn Pandas for data manipulation.",
-
-    "TensorFlow": "Learn TensorFlow and build basic ML models.",
-
-    "Networking": "Learn TCP/IP, protocols and network fundamentals.",
-
-    "Linux": "Learn Linux commands and system administration.",
-
-    "Cybersecurity Fundamentals": "Learn common attacks, vulnerabilities and security principles.",
-
-    "SIEM": "Learn security monitoring and SIEM tools.",
-
-    "Cryptography": "Learn encryption, hashing and authentication."
+    "Git": {
+        description: "Learn Git and GitHub for version control.",
+        url: "https://www.youtube.com/watch?v=RGOj5yH7evk"
+    }
 };
 
 
-// =====================================
-// SHOW SKILLS WHEN CAREER CHANGES
-// =====================================
+
 
 const careerSelect = document.getElementById("career");
 
@@ -147,9 +149,7 @@ careerSelect.addEventListener("change", function () {
 });
 
 
-// =====================================
-// ANALYZE SKILLS
-// =====================================
+
 
 function analyzeSkills() {
 
@@ -174,7 +174,7 @@ function analyzeSkills() {
         Array.from(selectedElements).map(skill => skill.textContent);
 
 
-    // Find missing skills
+   
 
     const missingSkills =
         requiredSkills.filter(skill =>
@@ -182,7 +182,7 @@ function analyzeSkills() {
         );
 
 
-    // Calculate percentage
+  
 
     const percentage =
         Math.round(
@@ -190,18 +190,13 @@ function analyzeSkills() {
         );
 
 
-    // =====================================
-    // DISPLAY SCORE
-    // =====================================
+   
 
     document.getElementById("score").textContent =
         percentage + "%";
 
 
-    // =====================================
-    // DISPLAY SKILLS USER HAS
-    // =====================================
-
+   
     const skillsHave =
         document.getElementById("skillsHave");
 
@@ -228,9 +223,7 @@ function analyzeSkills() {
     }
 
 
-    // =====================================
-    // DISPLAY MISSING SKILLS
-    // =====================================
+    
 
     const skillsNeed =
         document.getElementById("skillsNeed");
@@ -260,9 +253,7 @@ function analyzeSkills() {
     }
 
 
-    // =====================================
-    // CREATE ROADMAP
-    // =====================================
+  
 
     const roadmap =
         document.getElementById("roadmapList");
@@ -294,10 +285,16 @@ function analyzeSkills() {
                     </div>
 
                     <div>
-                        <strong>${skill}</strong>
+                        <a href="${learning[skill]?.url || '#'}"
+                        target="_blank"
+                        class="roadmap-link">
+
+                            ${skill}
+
+                        </a>
 
                         <p>
-                            ${learning[skill] ||
+                            ${learning[skill]?.description ||
                             "Start learning this skill through practical projects."}
                         </p>
                     </div>
@@ -311,9 +308,6 @@ function analyzeSkills() {
     }
 
 
-    // =====================================
-    // SHOW RESULTS
-    // =====================================
 
     const results =
         document.getElementById("results");
@@ -321,7 +315,7 @@ function analyzeSkills() {
     results.style.display = "block";
 
 
-    // Scroll to results
+
 
     results.scrollIntoView({
         behavior: "smooth"

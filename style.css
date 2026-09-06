@@ -109,7 +109,7 @@ nav {
 }
 
 
-/* BUTTON */
+
 
 .primary-btn,
 .analyze-btn {
@@ -140,7 +140,7 @@ nav {
 }
 
 
-/* HERO CARD */
+
 
 .hero-card {
     background: white;
@@ -513,4 +513,16 @@ footer {
     .nav-links {
         display: none;
     }
+}
+
+
+.roadmap-link {
+    color: #635bff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.roadmap-link:hover {
+    text-decoration: underline;
 }
