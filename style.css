@@ -15,7 +15,7 @@ body {
 }
 
 
-/* NAVBAR */
+
 
 nav {
     height: 75px;
@@ -45,16 +45,23 @@ nav {
 
 .nav-links a {
     text-decoration: none;
-    color: #444;
+    color: white;
     font-size: 15px;
+
+    background-color: #635bff;
+    border-radius: 25px;
+    padding: 10px;
 }
 
 .nav-links a:hover {
-    color: #635bff;
+    background-color: #8780ff;
+    scale: 1.1;
+    box-shadow: rgba(0, 0, 0, 1);
+    transition: all 0.2s ease-in-out;
 }
 
 
-/* HERO */
+
 
 .hero {
     min-height: 650px;
@@ -478,7 +485,7 @@ footer {
 }
 
 
-/* MOBILE */
+
 
 @media (max-width: 800px) {
 
