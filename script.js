@@ -460,133 +460,122 @@ function analyzeSkills() {
 
     const career = document.getElementById("career").value;
 
+    // Check career
+    if (!career) {
+        alert("Please select a target career.");
+        return;
+    }
+
+    // Check skills
     if (selectedSkills.length === 0) {
-
         alert("Please add at least one skill.");
-
         return;
     }
 
     const requiredSkills = careers[career].skills;
 
+    // Normalize user's skills
+    const normalizedSkills = selectedSkills.map(skill =>
+        normalizeSkill(skill)
+    );
 
     // Find skills the user has
     const skillsHave = requiredSkills.filter(requiredSkill =>
-
-        selectedSkills.some(userSkill =>
-
-            userSkill.toLowerCase() ===
-            requiredSkill.toLowerCase()
-
+        normalizedSkills.some(userSkill =>
+            userSkill.toLowerCase() === requiredSkill.toLowerCase()
         )
-
     );
-
 
     // Find missing skills
     const missingSkills = requiredSkills.filter(requiredSkill =>
-
         !skillsHave.some(skill =>
-
-            skill.toLowerCase() ===
-            requiredSkill.toLowerCase()
-
+            skill.toLowerCase() === requiredSkill.toLowerCase()
         )
-
     );
-
 
     // Calculate readiness
     const readiness = Math.round(
         (skillsHave.length / requiredSkills.length) * 100
     );
 
-
+    // Update score
     document.getElementById("readinessScore").textContent =
         readiness + "%";
 
-
     // Skills you have
     document.getElementById("skillsHave").innerHTML =
-
         skillsHave.length > 0
-
-        ? skillsHave
-            .map(skill =>
-                `<span class="skill-tag">${skill}</span>`
-            )
-            .join("")
-
-        : "<p>No matching skills found.</p>";
-
+            ? skillsHave
+                .map(skill =>
+                    `<span class="skill-tag">${skill}</span>`
+                )
+                .join("")
+            : "<p>No matching skills found.</p>";
 
     // Skills you need
     document.getElementById("skillsNeed").innerHTML =
-
         missingSkills.length > 0
-
-        ? missingSkills
-            .map(skill =>
-                `<span class="skill-tag missing">${skill}</span>`
-            )
-            .join("")
-
-        : "<p>🎉 You have all the required skills!</p>";
-
+            ? missingSkills
+                .map(skill =>
+                    `<span class="skill-tag missing">${skill}</span>`
+                )
+                .join("")
+            : "<p>🎉 You have all the required skills!</p>";
 
     // Roadmap
-    document.getElementById("roadmap").innerHTML =
+    document.getElementById("roadmapList").innerHTML =
+        missingSkills.length > 0
+            ? missingSkills.map((skill, index) => {
 
-        missingSkills.map((skill, index) => {
+                const info = learning[skill];
 
-            const info = learning[skill];
+                return `
+                    <div class="roadmap-card">
 
-            return `
-                <div class="roadmap-card">
+                        <div class="roadmap-number">
+                            ${index + 1}
+                        </div>
 
-                    <div class="roadmap-number">
-                        ${index + 1}
-                    </div>
+                        <div class="roadmap-content">
 
-                    <div class="roadmap-content">
+                            <a
+                                href="${info?.url || '#'}"
+                                target="_blank"
+                                class="roadmap-link"
+                            >
+                                ${skill}
+                            </a>
 
-                        <a
-                            href="${info?.url || '#'}"
-                            target="_blank"
-                            class="roadmap-link"
-                        >
-                            ${skill}
-                        </a>
+                            <p>
+                                ${
+                                    info?.description ||
+                                    "Start learning this skill through practical projects."
+                                }
+                            </p>
 
-                        <p>
                             ${
-                                info?.description ||
-                                "Start learning this skill through practical projects."
+                                info?.url
+                                    ? `
+                                    <a
+                                        href="${info.url}"
+                                        target="_blank"
+                                        class="tutorial-btn"
+                                    >
+                                        ▶ Watch Tutorial
+                                    </a>
+                                    `
+                                    : ""
                             }
-                        </p>
 
-                        ${
-                            info?.url
-                            ? `
-                                <a
-                                    href="${info.url}"
-                                    target="_blank"
-                                    class="tutorial-btn"
-                                >
-                                    ▶ Watch Tutorial
-                                </a>
-                            `
-                            : ""
-                        }
+                        </div>
 
                     </div>
+                `;
 
-                </div>
-            `;
+            }).join("")
+            : "<p class='empty'>🎉 You already have all the required skills!</p>";
 
-        }).join("");
-
-
+    // Show results
     document.getElementById("results").style.display = "block";
 
     document.getElementById("results").scrollIntoView({
