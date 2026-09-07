@@ -47,8 +47,6 @@ const careers = {
         ]
     },
 
-    // ===== NEW CAREERS =====
-
     devops: {
         name: "DevOps Engineer",
         skills: [
@@ -203,8 +201,6 @@ const careers = {
 // ===============================
 
 const skillAliases = {
-
-    // Programming
     "py": "Python",
     "python programming": "Python",
     "python language": "Python",
@@ -226,7 +222,6 @@ const skillAliases = {
     "github": "Git",
     "git hub": "Git",
 
-    // Data
     "powerbi": "Power BI",
     "power bi": "Power BI",
 
@@ -236,7 +231,6 @@ const skillAliases = {
     "stats": "Statistics",
     "statistics": "Statistics",
 
-    // AI / ML
     "ml": "Machine Learning",
     "machine learning": "Machine Learning",
     "machinelearning": "Machine Learning",
@@ -249,13 +243,11 @@ const skillAliases = {
     "tensorflow": "TensorFlow",
     "tf": "TensorFlow",
 
-    // Cybersecurity
     "network": "Networking",
     "networking": "Networking",
 
     "cyber security": "Cybersecurity Fundamentals",
     "cybersecurity": "Cybersecurity Fundamentals",
-
     "cybersecurity basics": "Cybersecurity Fundamentals",
 
     "security information event management": "SIEM",
@@ -266,9 +258,6 @@ const skillAliases = {
     "linux os": "Linux",
     "linux": "Linux",
 
-    // ===== NEW ALIASES =====
-
-    // DevOps / Cloud
     "docker": "Docker",
     "containers": "Docker",
     "containerization": "Docker",
@@ -292,7 +281,6 @@ const skillAliases = {
     "iac": "Terraform",
     "infrastructure as code": "Terraform",
 
-    // Design
     "figma": "Figma",
     "wireframes": "Wireframing",
     "wireframing": "Wireframing",
@@ -303,7 +291,6 @@ const skillAliases = {
     "usability testing": "Usability Testing",
     "usability": "Usability Testing",
 
-    // Product
     "agile": "Agile",
     "scrum": "Agile",
     "roadmapping": "Roadmapping",
@@ -311,7 +298,6 @@ const skillAliases = {
     "product roadmap": "Roadmapping",
     "market research": "Market Research",
 
-    // Mobile
     "kotlin": "Kotlin",
     "swift": "Swift",
     "flutter": "Flutter",
@@ -319,7 +305,6 @@ const skillAliases = {
     "react native": "React Native",
     "reactnative": "React Native",
 
-    // Data Engineering
     "etl": "ETL",
     "extract transform load": "ETL",
     "spark": "Apache Spark",
@@ -328,7 +313,6 @@ const skillAliases = {
     "data warehousing": "Data Warehousing",
     "data warehouse": "Data Warehousing",
 
-    // Game Dev
     "unity": "Unity",
     "unity3d": "Unity",
     "unreal": "Unreal Engine",
@@ -337,7 +321,6 @@ const skillAliases = {
     "3d modeling": "3D Modeling",
     "3d modelling": "3D Modeling",
 
-    // Marketing
     "seo": "SEO",
     "search engine optimization": "SEO",
     "google analytics": "Google Analytics",
@@ -347,21 +330,18 @@ const skillAliases = {
     "smm": "Social Media Marketing",
     "copywriting": "Copywriting",
 
-    // QA
     "selenium": "Selenium",
     "test automation": "Test Automation",
     "automation testing": "Test Automation",
     "manual testing": "Manual Testing",
     "qa testing": "Manual Testing",
 
-    // Blockchain
     "solidity": "Solidity",
     "smart contracts": "Smart Contracts",
     "smart contract": "Smart Contracts",
     "ethereum": "Ethereum",
     "web3": "Ethereum",
 
-    // Business Analysis
     "requirements gathering": "Requirements Gathering",
     "business requirements": "Requirements Gathering",
     "stakeholder management": "Stakeholder Management"
@@ -373,72 +353,18 @@ const skillAliases = {
 // ==========================================
 
 const allSkills = [
-    "Java",
-    "Python",
-    "C",
-    "C++",
-    "C#",
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "React",
-    "Git",
-    "GitHub",
-    "SQL",
-    "Excel",
-    "Power BI",
-    "Statistics",
-    "Data Visualization",
-    "Machine Learning",
-    "NumPy",
-    "Pandas",
-    "TensorFlow",
-    "Networking",
-    "Linux",
-    "Cybersecurity Fundamentals",
-    "SIEM",
-    "Cryptography",
-    "Responsive Design",
-
-    // ===== NEW SKILLS =====
-    "Docker",
-    "Kubernetes",
-    "AWS",
-    "Azure",
-    "CI/CD",
-    "Terraform",
-    "Figma",
-    "Wireframing",
-    "Prototyping",
-    "User Research",
-    "Usability Testing",
-    "Agile",
-    "Roadmapping",
-    "Market Research",
-    "Kotlin",
-    "Swift",
-    "Flutter",
-    "React Native",
-    "ETL",
-    "Apache Spark",
-    "Data Warehousing",
-    "Unity",
-    "Unreal Engine",
-    "Game Design",
-    "3D Modeling",
-    "SEO",
-    "Google Analytics",
-    "Content Marketing",
-    "Social Media Marketing",
-    "Copywriting",
-    "Selenium",
-    "Test Automation",
-    "Manual Testing",
-    "Solidity",
-    "Smart Contracts",
-    "Ethereum",
-    "Requirements Gathering",
-    "Stakeholder Management"
+    "Java", "Python", "C", "C++", "C#", "HTML", "CSS", "JavaScript",
+    "React", "Git", "GitHub", "SQL", "Excel", "Power BI", "Statistics",
+    "Data Visualization", "Machine Learning", "NumPy", "Pandas", "TensorFlow",
+    "Networking", "Linux", "Cybersecurity Fundamentals", "SIEM", "Cryptography",
+    "Responsive Design", "Docker", "Kubernetes", "AWS", "Azure", "CI/CD",
+    "Terraform", "Figma", "Wireframing", "Prototyping", "User Research",
+    "Usability Testing", "Agile", "Roadmapping", "Market Research", "Kotlin",
+    "Swift", "Flutter", "React Native", "ETL", "Apache Spark", "Data Warehousing",
+    "Unity", "Unreal Engine", "Game Design", "3D Modeling", "SEO", "Google Analytics",
+    "Content Marketing", "Social Media Marketing", "Copywriting", "Selenium",
+    "Test Automation", "Manual Testing", "Solidity", "Smart Contracts",
+    "Ethereum", "Requirements Gathering", "Stakeholder Management"
 ];
 
 let selectedSkills = [];
@@ -453,9 +379,7 @@ const suggestions = document.getElementById("suggestions");
 // ==========================================
 
 skillInput.addEventListener("input", function () {
-
     const value = skillInput.value.trim().toLowerCase();
-
     suggestions.innerHTML = "";
 
     if (value === "") {
@@ -464,10 +388,8 @@ skillInput.addEventListener("input", function () {
     }
 
     const matches = allSkills.filter(skill =>
-
         skill.toLowerCase().includes(value) &&
         !selectedSkills.includes(skill)
-
     );
 
     if (matches.length === 0) {
@@ -476,21 +398,15 @@ skillInput.addEventListener("input", function () {
     }
 
     matches.forEach(skill => {
-
         const suggestion = document.createElement("div");
-
         suggestion.className = "suggestion-item";
-
         suggestion.textContent = skill;
 
         suggestion.addEventListener("click", function () {
-
             addSkill(skill);
-
         });
 
         suggestions.appendChild(suggestion);
-
     });
 
     suggestions.style.display = "block";
@@ -502,399 +418,596 @@ skillInput.addEventListener("input", function () {
 // ==========================================
 
 skillInput.addEventListener("keydown", function (event) {
-
     if (event.key === "Enter") {
-
         event.preventDefault();
-
         const value = skillInput.value.trim();
 
         if (value === "") return;
 
-        // Find matching skill
         const match = allSkills.find(skill =>
             skill.toLowerCase() === value.toLowerCase()
         );
 
         if (match) {
-
             addSkill(match);
-
         } else {
-
-            // Allow custom skills
             addSkill(value);
-
         }
     }
 });
 
 
 // ==========================================
-// ADD SKILL
+// ADD / REMOVE SKILLS
 // ==========================================
 
 function addSkill(skill) {
-
-    if (selectedSkills.includes(skill)) {
-        return;
-    }
+    if (selectedSkills.includes(skill)) return;
 
     selectedSkills.push(skill);
-
     renderTags();
 
     skillInput.value = "";
-
     suggestions.innerHTML = "";
-
     suggestions.style.display = "none";
-
     skillInput.focus();
 }
 
-
-// ==========================================
-// DISPLAY TAGS
-// ==========================================
-
 function renderTags() {
-
     skillTags.innerHTML = "";
 
     selectedSkills.forEach((skill, index) => {
-
         const tag = document.createElement("span");
-
         tag.className = "skill-input-tag";
-
         tag.innerHTML = `
             ${skill}
-            <button onclick="removeSkill(${index})">
-                ×
-            </button>
+            <button onclick="removeSkill(${index})">×</button>
         `;
-
         skillTags.appendChild(tag);
-
     });
 }
 
-
-// ==========================================
-// REMOVE SKILL
-// ==========================================
-
 function removeSkill(index) {
-
     selectedSkills.splice(index, 1);
-
     renderTags();
-
     skillInput.focus();
 }
 
 
 // ===============================
-// LEARNING ROADMAP
+// ENHANCED LEARNING ROADMAP METADATA
 // ===============================
 
 const learning = {
-
     "Python": {
-        description: "Learn Python fundamentals and build practical projects.",
+        category: "Programming",
+        difficulty: "Beginner",
+        priority: "High",
+        time: "3-4 weeks",
+        project: "Build an Automated Web Scraper or CLI Expense Tracker",
+        description: "Learn Python syntax, data structures, functions, and standard libraries.",
         url: "https://www.youtube.com/results?search_query=python+for+beginners"
     },
-
     "SQL": {
-        description: "Learn SQL queries, joins, databases and data manipulation.",
+        category: "Databases",
+        difficulty: "Beginner",
+        priority: "High",
+        time: "2 weeks",
+        project: "Design a Student Database & Query Sales Reports",
+        description: "Master SELECT queries, JOINs, aggregations, and subqueries.",
         url: "https://www.youtube.com/results?search_query=SQL+for+beginners"
     },
-
     "Excel": {
-        description: "Learn Excel formulas, pivot tables and data analysis.",
+        category: "Data Analysis",
+        difficulty: "Beginner",
+        priority: "Medium",
+        time: "1-2 weeks",
+        project: "Create an Interactive Financial Budget Dashboard",
+        description: "Master Pivot Tables, VLOOKUP/XLOOKUP, and nested formulas.",
         url: "https://www.youtube.com/results?search_query=Excel+data+analysis+for+beginners"
     },
-
     "Power BI": {
-        description: "Learn Power BI and create interactive dashboards.",
+        category: "Data Visualization",
+        difficulty: "Intermediate",
+        priority: "Medium",
+        time: "2-3 weeks",
+        project: "Build an Executive Sales Performance Dashboard",
+        description: "Learn DAX formulas, data modeling, and interactive reports.",
         url: "https://www.youtube.com/results?search_query=Power+BI+for+beginners"
     },
-
     "Statistics": {
-        description: "Learn probability, statistics and data interpretation.",
+        category: "Analytics",
+        difficulty: "Intermediate",
+        priority: "High",
+        time: "3 weeks",
+        project: "Perform Hypothesis Testing on A/B Test Dataset",
+        description: "Learn probability distributions, hypothesis testing, and confidence intervals.",
         url: "https://www.youtube.com/results?search_query=statistics+for+data+science"
     },
-
     "Data Visualization": {
-        description: "Learn how to represent data using charts and dashboards.",
+        category: "Analytics",
+        difficulty: "Beginner",
+        priority: "Medium",
+        time: "1-2 weeks",
+        project: "Redesign a Complex Dataset into Clear Charts",
+        description: "Learn visual hierarchy, chart selection, and storytelling with data.",
         url: "https://www.youtube.com/results?search_query=data+visualization+for+beginners"
     },
-
     "HTML": {
-        description: "Learn HTML structure and semantic elements.",
+        category: "Frontend",
+        difficulty: "Beginner",
+        priority: "High",
+        time: "1 week",
+        project: "Build a Personal Portfolio Landing Page",
+        description: "Learn semantic tags, forms, accessibility, and page structuring.",
         url: "https://www.youtube.com/results?search_query=HTML+for+beginners"
     },
-
     "CSS": {
-        description: "Learn CSS, Flexbox, Grid and responsive design.",
+        category: "Frontend",
+        difficulty: "Beginner",
+        priority: "High",
+        time: "2 weeks",
+        project: "Style a Responsive Product Showcase Page",
+        description: "Master Flexbox, Grid layouts, animations, and CSS variables.",
         url: "https://www.youtube.com/results?search_query=CSS+for+beginners"
     },
-
     "JavaScript": {
-        description: "Learn JavaScript fundamentals and DOM manipulation.",
+        category: "Programming",
+        difficulty: "Intermediate",
+        priority: "High",
+        time: "4 weeks",
+        project: "Build an Interactive Weather Dashboard with API Fetching",
+        description: "Master ES6+ syntax, DOM manipulation, Async/Await, and APIs.",
         url: "https://www.youtube.com/results?search_query=JavaScript+for+beginners"
     },
-
     "React": {
-        description: "Learn React components, props, state and hooks.",
+        category: "Frontend",
+        difficulty: "Intermediate",
+        priority: "High",
+        time: "3-4 weeks",
+        project: "Build an E-Commerce Cart with State Management",
+        description: "Learn JSX, components, props, hooks, and Context API.",
         url: "https://www.youtube.com/results?search_query=React+for+beginners"
     },
-
     "Git": {
-        description: "Learn Git and GitHub for version control.",
+        category: "DevTools",
+        difficulty: "Beginner",
+        priority: "High",
+        time: "1 week",
+        project: "Publish an Open Source Repo with Branching Strategy",
+        description: "Learn commit workflows, branching, merging, and resolving conflicts.",
         url: "https://www.youtube.com/results?search_query=Git+and+GitHub+for+beginners"
     },
-
     "Responsive Design": {
-        description: "Learn how to make websites work across phones, tablets and desktops.",
+        category: "Frontend",
+        difficulty: "Beginner",
+        priority: "Medium",
+        time: "1 week",
+        project: "Convert a Desktop Design to Mobile-First CSS Layout",
+        description: "Learn media queries, fluid typography, and touch target sizing.",
         url: "https://www.youtube.com/results?search_query=responsive+web+design+for+beginners"
     },
-
     "Machine Learning": {
-        description: "Learn machine learning concepts and build predictive models.",
+        category: "AI / ML",
+        difficulty: "Advanced",
+        priority: "High",
+        time: "5-6 weeks",
+        project: "Train a Housing Price Prediction Model with Scikit-Learn",
+        description: "Learn supervised/unsupervised learning, regression, and model evaluation.",
         url: "https://www.youtube.com/results?search_query=machine+learning+for+beginners"
     },
-
     "NumPy": {
-        description: "Learn NumPy for numerical computing in Python.",
+        category: "Data Science",
+        difficulty: "Beginner",
+        priority: "Medium",
+        time: "1 week",
+        project: "Perform Matrix Operations & Vectorized Calculations",
+        description: "Learn N-dimensional arrays, slicing, broadcasting, and linear algebra.",
         url: "https://www.youtube.com/results?search_query=NumPy+for+beginners"
     },
-
     "Pandas": {
-        description: "Learn Pandas for data manipulation and analysis.",
+        category: "Data Science",
+        difficulty: "Intermediate",
+        priority: "High",
+        time: "2 weeks",
+        project: "Clean & Transform a Messy E-Commerce Dataset",
+        description: "Master DataFrames, Series, missing data handling, and GroupBy operations.",
         url: "https://www.youtube.com/results?search_query=Pandas+Python+for+beginners"
     },
-
     "TensorFlow": {
-        description: "Learn TensorFlow and build machine learning models.",
+        category: "AI / ML",
+        difficulty: "Advanced",
+        priority: "Medium",
+        time: "4 weeks",
+        project: "Build an Image Classification Convolutional Neural Network",
+        description: "Learn deep learning, neural network layers, loss functions, and Keras API.",
         url: "https://www.youtube.com/results?search_query=TensorFlow+for+beginners"
     },
-
     "Networking": {
-        description: "Learn networking fundamentals, protocols and network architecture.",
+        category: "IT / Infrastructure",
+        difficulty: "Intermediate",
+        priority: "High",
+        time: "3 weeks",
+        project: "Configure Subnets & Analyze Packets using Wireshark",
+        description: "Learn TCP/IP, OSI model, DNS, DHCP, routing, and switching.",
         url: "https://www.youtube.com/results?search_query=computer+networking+for+beginners"
     },
-
     "Linux": {
-        description: "Learn Linux commands, terminal usage and system administration.",
+        category: "Operating Systems",
+        difficulty: "Beginner",
+        priority: "High",
+        time: "2 weeks",
+        project: "Set Up a Headless Linux Server with Bash Scripting",
+        description: "Master shell commands, file permissions, users, and service management.",
         url: "https://www.youtube.com/results?search_query=Linux+for+beginners"
     },
-
     "Cybersecurity Fundamentals": {
-        description: "Learn the fundamentals of cybersecurity and common security threats.",
+        category: "Security",
+        difficulty: "Beginner",
+        priority: "High",
+        time: "2-3 weeks",
+        project: "Conduct a Vulnerability Assessment on a Test Network",
+        description: "Understand threat vectors, CIA triad, authentication, and security frameworks.",
         url: "https://www.youtube.com/results?search_query=cybersecurity+for+beginners"
     },
-
     "SIEM": {
-        description: "Learn how SIEM systems monitor and analyze security events.",
+        category: "Security",
+        difficulty: "Intermediate",
+        priority: "Medium",
+        time: "2-3 weeks",
+        project: "Set Up Security Monitoring in Splunk / Elastic SIEM",
+        description: "Learn log aggregation, alert rules creation, and incident response tracking.",
         url: "https://www.youtube.com/results?search_query=SIEM+for+beginners"
     },
-
     "Cryptography": {
-        description: "Learn encryption, hashing and fundamental cryptography concepts.",
+        category: "Security",
+        difficulty: "Advanced",
+        priority: "Medium",
+        time: "3 weeks",
+        project: "Implement Symmetric & Asymmetric Encryption Scripts",
+        description: "Understand SSL/TLS, RSA, AES, hashing algorithms, and PKI.",
         url: "https://www.youtube.com/results?search_query=cryptography+for+beginners"
     },
-
-    // ===== NEW LEARNING ENTRIES =====
-
     "Docker": {
-        description: "Learn to containerize applications with Docker images and containers.",
+        category: "DevOps",
+        difficulty: "Intermediate",
+        priority: "High",
+        time: "2 weeks",
+        project: "Containerize a Multi-Container Node + MongoDB App",
+        description: "Learn Dockerfiles, images, containers, volumes, and Docker Compose.",
         url: "https://www.youtube.com/results?search_query=Docker+for+beginners"
     },
-
     "Kubernetes": {
-        description: "Learn to orchestrate, deploy and scale containers with Kubernetes.",
+        category: "DevOps",
+        difficulty: "Advanced",
+        priority: "Medium",
+        time: "4 weeks",
+        project: "Deploy an Auto-Scaling App Cluster on Minikube",
+        description: "Master Pods, Deployments, Services, Ingress, and ConfigMaps.",
         url: "https://www.youtube.com/results?search_query=Kubernetes+for+beginners"
     },
-
     "AWS": {
-        description: "Learn core AWS services like EC2, S3, IAM and cloud fundamentals.",
+        category: "Cloud",
+        difficulty: "Intermediate",
+        priority: "High",
+        time: "3-4 weeks",
+        project: "Host a Serverless Web App using S3, Lambda, & DynamoDB",
+        description: "Learn EC2, S3, IAM, CloudFront, Lambda, and VPC architecture.",
         url: "https://www.youtube.com/results?search_query=AWS+for+beginners"
     },
-
     "Azure": {
-        description: "Learn core Microsoft Azure services and cloud fundamentals.",
+        category: "Cloud",
+        difficulty: "Intermediate",
+        priority: "Medium",
+        time: "3-4 weeks",
+        project: "Deploy Azure Virtual Machines & Web Services",
+        description: "Learn Azure App Service, Blob Storage, Azure AD, and VNets.",
         url: "https://www.youtube.com/results?search_query=Azure+for+beginners"
     },
-
     "CI/CD": {
-        description: "Learn to build continuous integration and deployment pipelines.",
+        category: "DevOps",
+        difficulty: "Intermediate",
+        priority: "High",
+        time: "2 weeks",
+        project: "Build a GitHub Actions Pipeline for Automated Testing & Deployment",
+        description: "Automate build, test, and release workflows with pipeline scripts.",
         url: "https://www.youtube.com/results?search_query=CI+CD+pipeline+for+beginners"
     },
-
     "Terraform": {
-        description: "Learn infrastructure as code and automated provisioning with Terraform.",
+        category: "DevOps",
+        difficulty: "Intermediate",
+        priority: "Medium",
+        time: "2 weeks",
+        project: "Provision an AWS VPC & EC2 Instance using HCL Scripts",
+        description: "Master Infrastructure as Code (IaC), state management, and modules.",
         url: "https://www.youtube.com/results?search_query=Terraform+for+beginners"
     },
-
     "Figma": {
-        description: "Learn to design interfaces and prototypes using Figma.",
+        category: "Design",
+        difficulty: "Beginner",
+        priority: "High",
+        time: "2 weeks",
+        project: "Design a High-Fidelity Mobile App Concept with Components",
+        description: "Master auto-layout, design systems, variants, and interactive prototyping.",
         url: "https://www.youtube.com/results?search_query=Figma+for+beginners"
     },
-
     "Wireframing": {
-        description: "Learn to sketch low-fidelity layouts and structure user interfaces.",
+        category: "Design",
+        difficulty: "Beginner",
+        priority: "High",
+        time: "1 week",
+        project: "Sketch Low-Fidelity Wireframes for a Travel Booking App",
+        description: "Learn spatial distribution, user flow mapping, and low-res layouts.",
         url: "https://www.youtube.com/results?search_query=wireframing+for+beginners"
     },
-
     "Prototyping": {
-        description: "Learn to build interactive prototypes to test design ideas.",
+        category: "Design",
+        difficulty: "Intermediate",
+        priority: "Medium",
+        time: "1-2 weeks",
+        project: "Build an Interactive Micro-Interaction Prototype",
+        description: "Master screen transitions, smart animations, and interactive component states.",
         url: "https://www.youtube.com/results?search_query=UX+prototyping+for+beginners"
     },
-
     "User Research": {
-        description: "Learn to conduct interviews, surveys and usability studies to understand users.",
+        category: "Design",
+        difficulty: "Intermediate",
+        priority: "High",
+        time: "2 weeks",
+        project: "Conduct User Interviews & Synthesize an Affinity Diagram",
+        description: "Learn qualitative research, interview techniques, user personas, and journeys.",
         url: "https://www.youtube.com/results?search_query=UX+user+research+for+beginners"
     },
-
     "Usability Testing": {
-        description: "Learn to plan and run usability tests to evaluate designs.",
+        category: "Design",
+        difficulty: "Intermediate",
+        priority: "Medium",
+        time: "1 week",
+        project: "Run a Moderated Usability Test on 5 Users & Report Insights",
+        description: "Formulate task scenarios, record observations, and report usability metrics.",
         url: "https://www.youtube.com/results?search_query=usability+testing+for+beginners"
     },
-
     "Agile": {
-        description: "Learn Agile and Scrum principles for iterative product delivery.",
+        category: "Management",
+        difficulty: "Beginner",
+        priority: "High",
+        time: "1 week",
+        project: "Manage a Mock Product Backlog with Jira / Trello Sprints",
+        description: "Understand Scrum roles, sprint planning, user stories, and retrospectives.",
         url: "https://www.youtube.com/results?search_query=Agile+Scrum+for+beginners"
     },
-
     "Roadmapping": {
-        description: "Learn to build and prioritize product roadmaps.",
+        category: "Management",
+        difficulty: "Intermediate",
+        priority: "High",
+        time: "1-2 weeks",
+        project: "Create a Strategic 6-Month Product Roadmap",
+        description: "Learn feature prioritization frameworks (RICE, MoSCoW) and vision mapping.",
         url: "https://www.youtube.com/results?search_query=product+roadmap+for+beginners"
     },
-
     "Market Research": {
-        description: "Learn to analyze markets, competitors and customer needs.",
+        category: "Business",
+        difficulty: "Intermediate",
+        priority: "Medium",
+        time: "2 weeks",
+        project: "Write a Competitive Analysis Report on a Tech Industry Segment",
+        description: "Learn TAM/SAM/SOM sizing, competitor matrix design, and industry trends.",
         url: "https://www.youtube.com/results?search_query=market+research+for+beginners"
     },
-
     "Kotlin": {
-        description: "Learn Kotlin for native Android app development.",
+        category: "Mobile",
+        difficulty: "Intermediate",
+        priority: "High",
+        time: "3-4 weeks",
+        project: "Build a Native Android Notes App with Room DB",
+        description: "Learn Kotlin basics, Android Jetpack components, and Material Design.",
         url: "https://www.youtube.com/results?search_query=Kotlin+for+beginners"
     },
-
     "Swift": {
-        description: "Learn Swift for native iOS and macOS app development.",
+        category: "Mobile",
+        difficulty: "Intermediate",
+        priority: "High",
+        time: "3-4 weeks",
+        project: "Build a Native iOS Habit Tracker App using SwiftUI",
+        description: "Learn Swift language basics, SwiftUI, CoreData, and App Store submission.",
         url: "https://www.youtube.com/results?search_query=Swift+for+beginners"
     },
-
     "Flutter": {
-        description: "Learn Flutter and Dart to build cross-platform mobile apps.",
+        category: "Mobile",
+        difficulty: "Intermediate",
+        priority: "Medium",
+        time: "3 weeks",
+        project: "Build a Cross-Platform E-Commerce Mobile App",
+        description: "Learn Dart programming, Flutter widgets, state management (Provider/Riverpod).",
         url: "https://www.youtube.com/results?search_query=Flutter+for+beginners"
     },
-
     "React Native": {
-        description: "Learn React Native to build cross-platform mobile apps with JavaScript.",
+        category: "Mobile",
+        difficulty: "Intermediate",
+        priority: "Medium",
+        time: "3 weeks",
+        project: "Build a Social Media Feed Mobile App with Expo",
+        description: "Learn cross-platform mobile components, navigation, and native APIs.",
         url: "https://www.youtube.com/results?search_query=React+Native+for+beginners"
     },
-
     "ETL": {
-        description: "Learn to build extract, transform and load pipelines for data systems.",
+        category: "Data Engineering",
+        difficulty: "Intermediate",
+        priority: "High",
+        time: "3 weeks",
+        project: "Build an Automated Data Pipeline Extracting API Data to SQL",
+        description: "Learn data extraction, transformation scripts, scheduling (Airflow), and loading.",
         url: "https://www.youtube.com/results?search_query=ETL+pipelines+for+beginners"
     },
-
     "Apache Spark": {
-        description: "Learn Apache Spark for large-scale distributed data processing.",
+        category: "Data Engineering",
+        difficulty: "Advanced",
+        priority: "Medium",
+        time: "4 weeks",
+        project: "Process 1M+ Records in Parallel using PySpark DataFrames",
+        description: "Master distributed computing, Spark SQL, RDDs, and PySpark API.",
         url: "https://www.youtube.com/results?search_query=Apache+Spark+for+beginners"
     },
-
     "Data Warehousing": {
-        description: "Learn data warehouse design, modeling and management concepts.",
+        category: "Data Engineering",
+        difficulty: "Intermediate",
+        priority: "High",
+        time: "2-3 weeks",
+        project: "Design a Star Schema Model in Snowflake / Redshift",
+        description: "Learn dimensional modeling, fact/dimension tables, and OLAP concepts.",
         url: "https://www.youtube.com/results?search_query=data+warehousing+for+beginners"
     },
-
     "Unity": {
-        description: "Learn to build 2D and 3D games using the Unity engine.",
+        category: "Game Dev",
+        difficulty: "Intermediate",
+        priority: "High",
+        time: "4 weeks",
+        project: "Build a 2D Platformer Game with Complete Scoring Systems",
+        description: "Learn Unity interface, C# scripting, physics, and game mechanics.",
         url: "https://www.youtube.com/results?search_query=Unity+game+development+for+beginners"
     },
-
     "Unreal Engine": {
-        description: "Learn to build high-fidelity games using Unreal Engine and Blueprints.",
+        category: "Game Dev",
+        difficulty: "Advanced",
+        priority: "Medium",
+        time: "5 weeks",
+        project: "Build a 3D First-Person Environment with Blueprint Systems",
+        description: "Master Unreal Engine UI, Visual Blueprints, lighting, and C++ plugins.",
         url: "https://www.youtube.com/results?search_query=Unreal+Engine+for+beginners"
     },
-
     "Game Design": {
-        description: "Learn game design principles, mechanics and level design.",
+        category: "Game Dev",
+        difficulty: "Beginner",
+        priority: "High",
+        time: "2 weeks",
+        project: "Write a Game Design Document (GDD) for an Indie Concept",
+        description: "Learn game loops, player motivation, pacing, level balance, and feedback.",
         url: "https://www.youtube.com/results?search_query=game+design+for+beginners"
     },
-
     "3D Modeling": {
-        description: "Learn 3D modeling fundamentals for games and animation.",
+        category: "Game Dev",
+        difficulty: "Intermediate",
+        priority: "Medium",
+        time: "3-4 weeks",
+        project: "Model, Texture, and UV Map Low-Poly Game Assets in Blender",
+        description: "Learn mesh editing, texturing, UV unwrapping, and rigging basics.",
         url: "https://www.youtube.com/results?search_query=3D+modeling+for+beginners"
     },
-
     "SEO": {
-        description: "Learn search engine optimization to improve site visibility and rankings.",
+        category: "Marketing",
+        difficulty: "Beginner",
+        priority: "High",
+        time: "2 weeks",
+        project: "Perform an On-Page & Technical SEO Audit on a Live Website",
+        description: "Learn keyword research, technical SEO, backlinks, and search intents.",
         url: "https://www.youtube.com/results?search_query=SEO+for+beginners"
     },
-
     "Google Analytics": {
-        description: "Learn to track and analyze website traffic with Google Analytics.",
+        category: "Marketing",
+        difficulty: "Intermediate",
+        priority: "High",
+        time: "1-2 weeks",
+        project: "Configure GA4 Conversion Events & Custom Dashboards",
+        description: "Understand event tracking, user funnels, acquisition paths, and GA4 reports.",
         url: "https://www.youtube.com/results?search_query=Google+Analytics+for+beginners"
     },
-
     "Content Marketing": {
-        description: "Learn to plan and create content that attracts and engages audiences.",
+        category: "Marketing",
+        difficulty: "Beginner",
+        priority: "Medium",
+        time: "1-2 weeks",
+        project: "Develop a Quarterly Content Strategy & Editorial Calendar",
+        description: "Learn content creation frameworks, topic clusters, and content distribution.",
         url: "https://www.youtube.com/results?search_query=content+marketing+for+beginners"
     },
-
     "Social Media Marketing": {
-        description: "Learn to build and run marketing campaigns across social platforms.",
+        category: "Marketing",
+        difficulty: "Beginner",
+        priority: "Medium",
+        time: "1-2 weeks",
+        project: "Run & Analyze a Paid Social Campaign on Meta / LinkedIn",
+        description: "Learn ad targeting, copy testing, ROI calculation, and brand positioning.",
         url: "https://www.youtube.com/results?search_query=social+media+marketing+for+beginners"
     },
-
     "Copywriting": {
-        description: "Learn to write persuasive, audience-focused marketing copy.",
+        category: "Marketing",
+        difficulty: "Beginner",
+        priority: "High",
+        time: "1 week",
+        project: "Write a Landing Page Copy Suite using PAS / AIDA Frameworks",
+        description: "Learn persuasive writing, value propositions, and calls to action.",
         url: "https://www.youtube.com/results?search_query=copywriting+for+beginners"
     },
-
     "Selenium": {
-        description: "Learn to automate browser testing with Selenium WebDriver.",
+        category: "QA Automation",
+        difficulty: "Intermediate",
+        priority: "High",
+        time: "2-3 weeks",
+        project: "Build an Automated E-Commerce Checkout Test Suite",
+        description: "Learn WebDriver locator strategies, assertions, and test script design.",
         url: "https://www.youtube.com/results?search_query=Selenium+for+beginners"
     },
-
     "Test Automation": {
-        description: "Learn to design and build automated test suites and frameworks.",
+        category: "QA Automation",
+        difficulty: "Intermediate",
+        priority: "High",
+        time: "3 weeks",
+        project: "Build a Page Object Model (POM) Automation Framework",
+        description: "Master test framework architecture, reporting, and CI integration.",
         url: "https://www.youtube.com/results?search_query=test+automation+for+beginners"
     },
-
     "Manual Testing": {
-        description: "Learn manual software testing techniques, test cases and bug reporting.",
+        category: "QA Automation",
+        difficulty: "Beginner",
+        priority: "High",
+        time: "1 week",
+        project: "Write Comprehensive Test Cases & Defect Reports for an App",
+        description: "Learn software testing lifecycles (STLC), bug tracking, and boundary testing.",
         url: "https://www.youtube.com/results?search_query=manual+testing+for+beginners"
     },
-
     "Solidity": {
-        description: "Learn Solidity to write smart contracts for Ethereum-based blockchains.",
+        category: "Blockchain",
+        difficulty: "Advanced",
+        priority: "High",
+        time: "3-4 weeks",
+        project: "Develop & Deploy an ERC-20 Token Smart Contract",
+        description: "Master Solidity syntax, contract state, inheritance, and security patterns.",
         url: "https://www.youtube.com/results?search_query=Solidity+for+beginners"
     },
-
     "Smart Contracts": {
-        description: "Learn how smart contracts work and how to design them securely.",
+        category: "Blockchain",
+        difficulty: "Advanced",
+        priority: "High",
+        time: "3 weeks",
+        project: "Audit a Vulnerable Smart Contract for Reentrancy Attacks",
+        description: "Learn gas optimization, security vulnerabilities, testing frameworks (Hardhat).",
         url: "https://www.youtube.com/results?search_query=smart+contracts+for+beginners"
     },
-
     "Ethereum": {
-        description: "Learn Ethereum and blockchain fundamentals for Web3 development.",
+        category: "Blockchain",
+        difficulty: "Intermediate",
+        priority: "Medium",
+        time: "2 weeks",
+        project: "Build a Web3 Frontend Connecting MetaMask to a Contract",
+        description: "Understand EVM, gas mechanics, transactions, and Web3.js / Ethers.js integration.",
         url: "https://www.youtube.com/results?search_query=Ethereum+blockchain+for+beginners"
     },
-
     "Requirements Gathering": {
-        description: "Learn to elicit, document and validate business requirements.",
+        category: "Business Analysis",
+        difficulty: "Beginner",
+        priority: "High",
+        time: "1-2 weeks",
+        project: "Produce a Business Requirements Document (BRD) for a Feature",
+        description: "Learn elicitation methods, scope mapping, functional vs non-functional requirements.",
         url: "https://www.youtube.com/results?search_query=requirements+gathering+for+beginners"
     },
-
     "Stakeholder Management": {
-        description: "Learn to identify, engage and align stakeholders on a project.",
+        category: "Business Analysis",
+        difficulty: "Intermediate",
+        priority: "Medium",
+        time: "1 week",
+        project: "Create a Power/Interest Stakeholder Matrix & Communication Plan",
+        description: "Master communication strategies, expectations alignment, and conflict resolution.",
         url: "https://www.youtube.com/results?search_query=stakeholder+management+for+beginners"
     }
 };
@@ -905,27 +1018,19 @@ const learning = {
 // ===============================
 
 function normalizeSkill(skill) {
-
-    // Remove extra spaces
     skill = skill.trim().toLowerCase();
-
-    // Remove unnecessary characters
     skill = skill.replace(/[()]/g, "");
 
-    // Check aliases
     if (skillAliases[skill]) {
         return skillAliases[skill];
     }
 
-    // Try matching against official skill names
     for (const officialSkill of Object.keys(skillAliases)) {
-
         if (skill === officialSkill.toLowerCase()) {
             return skillAliases[officialSkill];
         }
     }
 
-    // Capitalize unknown skill
     return skill
         .split(" ")
         .map(word => word.charAt(0).toUpperCase() + word.slice(1))
@@ -934,129 +1039,109 @@ function normalizeSkill(skill) {
 
 
 // ===============================
-// ANALYZE SKILLS
+// ANALYZE SKILLS & RENDER ROADMAP
 // ===============================
 
 function analyzeSkills() {
-
     const career = document.getElementById("career").value;
 
-    // Check career
     if (!career) {
         alert("Please select a target career.");
         return;
     }
 
-    // Check skills
-    
-
     const requiredSkills = careers[career].skills;
 
-    // Normalize user's skills
     const normalizedSkills = selectedSkills.map(skill =>
         normalizeSkill(skill)
     );
 
-    // Find skills the user has
     const skillsHave = requiredSkills.filter(requiredSkill =>
         normalizedSkills.some(userSkill =>
             userSkill.toLowerCase() === requiredSkill.toLowerCase()
         )
     );
 
-    // Find missing skills
     const missingSkills = requiredSkills.filter(requiredSkill =>
         !skillsHave.some(skill =>
             skill.toLowerCase() === requiredSkill.toLowerCase()
         )
     );
 
-    // Calculate readiness
     const readiness = Math.round(
         (skillsHave.length / requiredSkills.length) * 100
     );
 
-    // Update score
-    document.getElementById("readinessScore").textContent =
-        readiness + "%";
+    document.getElementById("readinessScore").textContent = readiness + "%";
 
-    // Skills you have
+    // Display skills user has
     document.getElementById("skillsHave").innerHTML =
         skillsHave.length > 0
             ? skillsHave
-                .map(skill =>
-                    `<span class="skill-tag">${skill}</span>`
-                )
+                .map(skill => `<span class="skill-tag">${skill}</span>`)
                 .join("")
             : "<p>No matching skills found.</p>";
 
-    // Skills you need
+    // Display skills needed
     document.getElementById("skillsNeed").innerHTML =
         missingSkills.length > 0
             ? missingSkills
-                .map(skill =>
-                    `<span class="skill-tag missing">${skill}</span>`
-                )
+                .map(skill => `<span class="skill-tag missing">${skill}</span>`)
                 .join("")
             : "<p>🎉 You have all the required skills!</p>";
 
-    // Roadmap
+    // Enhanced Roadmap Rendering
     document.getElementById("roadmapList").innerHTML =
         missingSkills.length > 0
             ? missingSkills.map((skill, index) => {
-
-                const info = learning[skill];
+                const info = learning[skill] || {
+                    category: "General",
+                    difficulty: "Intermediate",
+                    priority: "Medium",
+                    time: "2-3 weeks",
+                    project: `Build a practical ${skill} project.`,
+                    description: "Learn this skill through hands-on practice.",
+                    url: `https://www.youtube.com/results?search_query=${encodeURIComponent(skill)}+for+beginners`
+                };
 
                 return `
                     <div class="roadmap-card">
-
-                        <div class="roadmap-number">
-                            ${index + 1}
-                        </div>
-
+                        <div class="roadmap-number">${index + 1}</div>
+                        
                         <div class="roadmap-content">
+                            <div class="roadmap-header">
+                                <a href="${info.url}" target="_blank" class="roadmap-link">
+                                    ${skill}
+                                </a>
+                                <span class="badge category">${info.category}</span>
+                            </div>
 
-                            <a
-                                href="${info?.url || '#'}"
-                                target="_blank"
-                                class="roadmap-link"
-                            >
-                                ${skill}
+                            <div class="roadmap-meta">
+                                <span class="badge priority-${info.priority.toLowerCase()}">
+                                    Priority: ${info.priority}
+                                </span>
+                                <span class="badge difficulty-${info.difficulty.toLowerCase()}">
+                                    ${info.difficulty}
+                                </span>
+                                <span class="time-estimate">⏱️ Est. Time: ${info.time}</span>
+                            </div>
+
+                            <p class="description">${info.description}</p>
+
+                            <div class="project-box">
+                                💡 <strong>Recommended Project:</strong> ${info.project}
+                            </div>
+
+                            <a href="${info.url}" target="_blank" class="tutorial-btn">
+                                ▶ Watch Tutorial
                             </a>
-
-                            <p>
-                                ${
-                                    info?.description ||
-                                    "Start learning this skill through practical projects."
-                                }
-                            </p>
-
-                            ${
-                                info?.url
-                                    ? `
-                                    <a
-                                        href="${info.url}"
-                                        target="_blank"
-                                        class="tutorial-btn"
-                                    >
-                                        ▶ Watch Tutorial
-                                    </a>
-                                    `
-                                    : ""
-                            }
-
                         </div>
-
                     </div>
                 `;
-
             }).join("")
             : "<p class='empty'>🎉 You already have all the required skills!</p>";
 
-    // Show results
+    // Show and scroll to results
     document.getElementById("results").style.display = "block";
-
-    document.getElementById("results").scrollIntoView({
-        behavior: "smooth"
-    });
+    document.getElementById("results").scrollIntoView({ behavior: "smooth" });
 }
