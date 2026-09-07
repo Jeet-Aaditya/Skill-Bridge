@@ -74,31 +74,56 @@
         </div>
 
         <div class="analyzer-box">
-            <div class="form-group">
-                <label for="career">Target Career</label>
-                <select id="career">
-                    <option value="">Select a career</option>
-                    <option value="data">Data Analyst</option>
-                    <option value="web">Web Developer</option>
-                    <option value="ai">AI / ML Engineer</option>
-                    <option value="cyber">Cybersecurity Analyst</option>
-                    <option value="devops">DevOps Engineer</option>
-                    <option value="design">UX / UI Designer</option>
-                    <option value="product">Product Manager</option>
-                    <option value="mobile">Mobile App Developer</option>
-                    <option value="datasci">Data Scientist</option>
-                    <option value="dataeng">Data Engineer</option>
-                    <option value="cloud">Cloud Engineer</option>
-                    <option value="game">Game Developer</option>
-                    <option value="marketing">Digital Marketing Specialist</option>
-                    <option value="qa">QA / Test Automation Engineer</option>
-                    <option value="blockchain">Blockchain Developer</option>
-                    <option value="business">Business Analyst</option>
-                </select>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="career">Target Career</label>
+                    <select id="career">
+                        <option value="">Select a primary career</option>
+                        <option value="data">Data Analyst</option>
+                        <option value="web">Web Developer</option>
+                        <option value="ai">AI / ML Engineer</option>
+                        <option value="cyber">Cybersecurity Analyst</option>
+                        <option value="devops">DevOps Engineer</option>
+                        <option value="design">UX / UI Designer</option>
+                        <option value="product">Product Manager</option>
+                        <option value="mobile">Mobile App Developer</option>
+                        <option value="datasci">Data Scientist</option>
+                        <option value="dataeng">Data Engineer</option>
+                        <option value="cloud">Cloud Engineer</option>
+                        <option value="game">Game Developer</option>
+                        <option value="marketing">Digital Marketing Specialist</option>
+                        <option value="qa">QA / Test Automation Engineer</option>
+                        <option value="blockchain">Blockchain Developer</option>
+                        <option value="business">Business Analyst</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="compareCareer">Compare Career (Optional)</label>
+                    <select id="compareCareer">
+                        <option value="">None (Single Path)</option>
+                        <option value="data">Data Analyst</option>
+                        <option value="web">Web Developer</option>
+                        <option value="ai">AI / ML Engineer</option>
+                        <option value="cyber">Cybersecurity Analyst</option>
+                        <option value="devops">DevOps Engineer</option>
+                        <option value="design">UX / UI Designer</option>
+                        <option value="product">Product Manager</option>
+                        <option value="mobile">Mobile App Developer</option>
+                        <option value="datasci">Data Scientist</option>
+                        <option value="dataeng">Data Engineer</option>
+                        <option value="cloud">Cloud Engineer</option>
+                        <option value="game">Game Developer</option>
+                        <option value="marketing">Digital Marketing Specialist</option>
+                        <option value="qa">QA / Test Automation Engineer</option>
+                        <option value="blockchain">Blockchain Developer</option>
+                        <option value="business">Business Analyst</option>
+                    </select>
+                </div>
             </div>
 
             <div class="form-group">
-                <label>Skills You Have</label>
+                <label>Skills You Have & Proficiency</label>
                 <div class="tag-input-container" id="tagInputContainer">
                     <div id="skillTags"></div>
                     <input type="text" id="skillInput" placeholder="Type a skill..." autocomplete="off">
@@ -119,11 +144,12 @@
             <h2>Your Skill Gap</h2>
         </div>
 
-        <div class="result-grid">
+        <!-- Single/Primary Career Results Grid -->
+        <div class="result-grid" id="primaryResultGrid">
             <div class="result-card">
-                <h3>Career Readiness</h3>
+                <h3 id="primaryCareerTitle">Career Readiness</h3>
                 <div class="score" id="readinessScore">0%</div>
-                <p>Your current skill match for the selected career.</p>
+                <p>Weighted proficiency match for target career.</p>
             </div>
 
             <div class="result-card">
@@ -137,6 +163,31 @@
                 <h3>Skills You Need</h3>
                 <div id="skillsNeed" class="result-list">
                     <p class="empty">Your missing skills will appear here.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Comparison Career Results Grid (Hidden by Default) -->
+        <div class="comparison-container" id="comparisonSection" style="display: none;">
+            <div class="section-heading">
+                <p class="tag">CAREER COMPARISON</p>
+                <h3 id="comparisonHeaderTitle">Side-by-Side Comparison</h3>
+            </div>
+            <div class="result-grid" id="compareResultGrid">
+                <div class="result-card">
+                    <h3 id="compareCareerTitle">Comparison Career Readiness</h3>
+                    <div class="score" id="compareReadinessScore">0%</div>
+                    <p>Weighted proficiency match for target career.</p>
+                </div>
+
+                <div class="result-card">
+                    <h3>Skills You Have</h3>
+                    <div id="compareSkillsHave" class="result-list"></div>
+                </div>
+
+                <div class="result-card">
+                    <h3>Skills You Need</h3>
+                    <div id="compareSkillsNeed" class="result-list"></div>
                 </div>
             </div>
         </div>
