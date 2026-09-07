@@ -14,17 +14,13 @@ body {
     color: #151515;
 }
 
-
-
-
+/* NAVIGATION */
 nav {
     height: 75px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     padding: 0 8%;
-
     background: white;
     border-bottom: 1px solid #eee;
 }
@@ -40,43 +36,36 @@ nav {
 
 .nav-links {
     display: flex;
-    gap: 30px;
+    gap: 15px;
 }
 
 .nav-links a {
     text-decoration: none;
-    color: white;
-    font-size: 15px;
-
-    background-color: #635bff;
-    border-radius: 25px;
-    padding: 10px;
-}
-
-.nav-links a:hover {
-    background-color: #8780ff;
-    scale: 1.1;
-    box-shadow: rgba(0, 0, 0, 1);
+    color: #333;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 20px;
     transition: all 0.2s ease-in-out;
 }
 
+.nav-links a:hover {
+    background-color: #635bff;
+    color: white;
+}
 
-
-
+/* HERO SECTION */
 .hero {
-    min-height: 650px;
-
+    min-height: 600px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    padding: 80px 10%;
-
-    gap: 70px;
+    padding: 60px 10%;
+    gap: 50px;
 }
 
 .hero-content {
-    max-width: 650px;
+    max-width: 600px;
 }
 
 .tag {
@@ -84,14 +73,13 @@ nav {
     font-weight: bold;
     font-size: 13px;
     letter-spacing: 2px;
-
     margin-bottom: 18px;
 }
 
 .hero h1 {
-    font-size: 62px;
-    line-height: 1.05;
-    margin-bottom: 25px;
+    font-size: 52px;
+    line-height: 1.1;
+    margin-bottom: 20px;
 }
 
 .hero h1 span {
@@ -100,65 +88,45 @@ nav {
 
 .hero p:not(.tag) {
     color: #666;
-    font-size: 18px;
-    line-height: 1.7;
-
-    max-width: 550px;
-
-    margin-bottom: 35px;
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 30px;
 }
-
-
-
 
 .primary-btn,
 .analyze-btn {
     display: inline-block;
-
-    padding: 15px 25px;
-
+    padding: 14px 28px;
     border: none;
     border-radius: 8px;
-
     background: #635bff;
     color: white;
-
     font-size: 15px;
     font-weight: bold;
-
     text-decoration: none;
-
     cursor: pointer;
-
     transition: 0.2s;
 }
 
 .primary-btn:hover,
 .analyze-btn:hover {
     transform: translateY(-2px);
-    opacity: 0.9;
+    opacity: 0.95;
+    box-shadow: 0 4px 12px rgba(99, 91, 255, 0.3);
 }
-
-
-
 
 .hero-card {
     background: white;
-
-    width: 360px;
-
-    padding: 30px;
-
+    width: 340px;
+    padding: 28px;
     border-radius: 18px;
-
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
 }
 
 .card-top {
     display: flex;
     justify-content: space-between;
-
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .card-top span {
@@ -166,38 +134,30 @@ nav {
 }
 
 .card-top strong {
-    font-size: 25px;
+    font-size: 24px;
     color: #635bff;
 }
 
 .progress {
     width: 100%;
     height: 10px;
-
     background: #eee;
-
     border-radius: 20px;
-
     overflow: hidden;
-
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
 .progress div {
     width: 65%;
     height: 100%;
-
     background: #635bff;
 }
 
 .mini-skills div {
-    padding: 14px 0;
-
+    padding: 12px 0;
     display: flex;
     align-items: center;
-
     border-bottom: 1px solid #eee;
-
     gap: 10px;
 }
 
@@ -208,426 +168,421 @@ nav {
 .dot {
     width: 10px;
     height: 10px;
-
     border-radius: 50%;
 }
 
-.green {
-    background: #22c55e;
-}
-
-.red {
-    background: #ef4444;
-}
-
+.green { background: #22c55e; }
+.red { background: #ef4444; }
 
 /* SECTIONS */
-
-.analyzer,
-.results {
-    padding: 100px 10%;
+.analyzer, .results {
+    padding: 80px 10%;
 }
 
 .section-heading {
     text-align: center;
-
-    margin-bottom: 45px;
+    margin-bottom: 40px;
 }
 
 .section-heading h2 {
-    font-size: 40px;
-    margin-bottom: 12px;
+    font-size: 36px;
+    margin-bottom: 10px;
 }
 
 .section-heading p:last-child {
     color: #777;
 }
 
-
 /* ANALYZER */
-
 .analyzer {
     background: white;
 }
 
 .analyzer-box {
-    max-width: 750px;
-
+    max-width: 700px;
     margin: auto;
-
-    padding: 40px;
-
+    padding: 35px;
     border: 1px solid #eee;
     border-radius: 15px;
-
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
 }
 
 .form-group {
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
 label {
     display: block;
-
     font-weight: bold;
-
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 
 select {
     width: 100%;
-
-    padding: 14px;
-
+    padding: 12px 14px;
     border: 1px solid #ddd;
     border-radius: 8px;
-
     font-size: 15px;
+    background: white;
+    outline: none;
+}
 
+select:focus {
+    border-color: #635bff;
+}
+
+/* SKILL INPUT TAGS */
+.tag-input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    min-height: 50px;
+    padding: 8px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
     background: white;
 }
 
-.skills-container {
-    display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 10px;
-}
-
-.skill {
-    padding: 10px 16px;
-
-    border: 1px solid #ddd;
-
-    border-radius: 20px;
-
-    cursor: pointer;
-
-    transition: 0.2s;
-}
-
-.skill:hover {
+.tag-input-container:focus-within {
     border-color: #635bff;
+    box-shadow: 0 0 0 3px rgba(99, 91, 255, 0.1);
 }
 
-.skill.selected {
+#skillTags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill-input-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 12px;
+    border-radius: 16px;
     background: #635bff;
     color: white;
+    font-size: 13px;
+    font-weight: 600;
+}
 
-    border-color: #635bff;
+.skill-input-tag button {
+    border: none;
+    background: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    line-height: 1;
+}
+
+#skillInput {
+    flex: 1;
+    min-width: 120px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    padding: 6px 0;
+}
+
+.suggestions {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    right: 0;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 100;
+    display: none;
+}
+
+.suggestion-item {
+    padding: 10px 14px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.suggestion-item:hover {
+    background: #f3f4f6;
+}
+
+.form-group small {
+    display: block;
+    margin-top: 8px;
+    color: #777;
+    font-size: 12px;
 }
 
 .analyze-btn {
     width: 100%;
 }
 
-
 /* RESULTS */
-
 .results {
     display: none;
 }
 
 .result-grid {
     display: grid;
-
     grid-template-columns: repeat(3, 1fr);
-
     gap: 20px;
-
-    max-width: 1100px;
-
-    margin: auto;
+    max-width: 1000px;
+    margin: 0 auto 50px auto;
 }
 
 .result-card {
     background: white;
-
-    padding: 30px;
-
-    border-radius: 15px;
-
+    padding: 25px;
+    border-radius: 12px;
     border: 1px solid #eee;
-
-    min-height: 200px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
 }
 
 .result-card h3 {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    font-size: 18px;
 }
 
 .score {
-    font-size: 55px;
-
+    font-size: 48px;
     font-weight: bold;
-
     color: #635bff;
-
-    margin-bottom: 10px;
-}
-
-.result-card p {
-    color: #777;
+    margin-bottom: 8px;
 }
 
 .result-list {
     display: flex;
-
-    flex-direction: column;
-
-    gap: 10px;
+    flex-wrap: wrap;
+    gap: 8px;
 }
 
-.skill-result {
-    padding: 10px;
-
-    border-radius: 7px;
-
-    background: #f3f4f6;
+.skill-tag {
+    display: inline-block;
+    padding: 6px 12px;
+    background: #eef2ff;
+    color: #4338ca;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
 }
 
-.missing {
-    background: #fff0f0;
-
-    color: #d62828;
+.skill-tag.missing {
+    background: #fef2f2;
+    color: #dc2626;
 }
 
-.empty {
-    color: #999;
+/* ROADMAP STYLING */
+.roadmap {
+    max-width: 1000px;
+    margin: 0 auto;
 }
-
-
-/* ROADMAP */
-
-/* =========================
-   ROADMAP SECTION
-========================= */
 
 #roadmapList {
     display: flex;
     flex-direction: column;
-    gap: 18px;
-    margin-top: 25px;
+    gap: 16px;
 }
 
-/* Individual roadmap card */
 .roadmap-card {
     display: flex;
     align-items: flex-start;
     gap: 18px;
-
     width: 100%;
     padding: 22px;
-
     background: #ffffff;
     border: 1px solid #e5e7eb;
-    border-radius: 14px;
-
-    box-sizing: border-box;
-
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
-
-    transition: transform 0.2s ease,
-                box-shadow 0.2s ease,
-                border-color 0.2s ease;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .roadmap-card:hover {
-    transform: translateY(-3px);
-    border-color: #635bff;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
 }
 
-/* Number on the left */
 .roadmap-number {
     flex-shrink: 0;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
-    width: 42px;
-    height: 42px;
-
+    width: 38px;
+    height: 38px;
     border-radius: 50%;
-
     background: #635bff;
     color: #ffffff;
-
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 700;
 }
 
-/* Main roadmap content */
 .roadmap-content {
     flex: 1;
-    min-width: 0;
 }
 
-.roadmap-content h3 {
-    margin: 0 0 8px;
+.roadmap-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+}
 
+.roadmap-link {
     color: #1e293b;
     font-size: 18px;
-}
-
-/* Skill name / YouTube link */
-.roadmap-link {
-    display: inline-block;
-
-    margin-bottom: 8px;
-
-    color: #635bff;
-    font-size: 18px;
     font-weight: 700;
-
     text-decoration: none;
-
-    transition: color 0.2s ease;
 }
 
 .roadmap-link:hover {
-    color: #4f46e5;
-    text-decoration: underline;
+    color: #635bff;
 }
 
-/* Description */
-.roadmap-content p {
-    margin: 0 0 14px;
+.roadmap-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+}
 
+/* BADGES WITH SPECIFICITY OVERRIDES */
+.badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.badge.category { background: #eef2ff !important; color: #4338ca !important; }
+.badge.priority-high { background: #fef2f2 !important; color: #dc2626 !important; }
+.badge.priority-medium { background: #fff7ed !important; color: #c2410c !important; }
+.badge.priority-low { background: #f1f5f9 !important; color: #475569 !important; }
+
+.badge.difficulty-beginner { background: #f0fdf4 !important; color: #15803d !important; }
+.badge.difficulty-intermediate { background: #eff6ff !important; color: #1d4ed8 !important; }
+.badge.difficulty-advanced { background: #f3e8ff !important; color: #6b21a8 !important; }
+
+.time-estimate {
+    font-size: 0.8rem;
     color: #64748b;
-    font-size: 14px;
-    line-height: 1.6;
+    margin-left: 4px;
 }
 
-/* Tutorial button */
+.description {
+    color: #475569;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.project-box {
+    background: #f8fafc;
+    border-left: 4px solid #635bff;
+    padding: 10px 14px;
+    border-radius: 0 8px 8px 0;
+    font-size: 13.5px;
+    color: #334155;
+    margin-bottom: 14px;
+}
+
 .tutorial-btn {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-
-    padding: 9px 14px;
-
+    padding: 8px 14px;
     background: #635bff;
     color: #ffffff;
-
-    border-radius: 8px;
-
+    border-radius: 6px;
     font-size: 13px;
     font-weight: 600;
-
     text-decoration: none;
-
-    transition: background 0.2s ease,
-                transform 0.2s ease;
+    transition: background 0.2s ease;
 }
 
 .tutorial-btn:hover {
     background: #4f46e5;
-    transform: translateY(-1px);
 }
-
-/* Empty roadmap message */
-#roadmapList .empty {
-    padding: 25px;
-
-    text-align: center;
-
-    background: #f8fafc;
-    border-radius: 12px;
-
-    color: #64748b;
-    font-size: 15px;
-}
-
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 600px) {
-
-    .roadmap-card {
-        gap: 12px;
-        padding: 16px;
-    }
-
-    .roadmap-number {
-        width: 36px;
-        height: 36px;
-
-        font-size: 14px;
-    }
-
-    .roadmap-link {
-        font-size: 16px;
-    }
-
-    .roadmap-content p {
-        font-size: 13px;
-    }
-
-    .tutorial-btn {
-        padding: 8px 12px;
-        font-size: 12px;
-    }
-}
-
 
 /* ABOUT */
-
 .about {
-    padding: 100px 10%;
-
+    padding: 80px 10%;
     display: grid;
-
     grid-template-columns: 1fr 1fr;
-
-    gap: 80px;
-
+    gap: 60px;
     background: #151515;
-
     color: white;
 }
 
 .about h2 {
-    font-size: 45px;
+    font-size: 38px;
 }
 
 .about > p {
     color: #bbb;
-
     line-height: 1.8;
-
-    font-size: 17px;
+    font-size: 16px;
 }
 
+/* CONTACT */
+.contact {
+    padding: 80px 10%;
+    background: #f7f8fc;
+}
+
+.contact-box {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-box h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.contact-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-size: 16px;
+}
+
+.contact-list a {
+    color: #635bff;
+    text-decoration: none;
+}
 
 /* FOOTER */
-
 footer {
     text-align: center;
-
-    padding: 30px;
-
+    padding: 25px;
     background: #111;
-
     color: #777;
+    font-size: 14px;
 }
 
-
-
-
+/* RESPONSIVE DESIGN */
 @media (max-width: 800px) {
-
     .hero {
         flex-direction: column;
         text-align: center;
     }
 
+    .hero-content {
+        max-width: 100%;
+    }
+
     .hero h1 {
-        font-size: 45px;
+        font-size: 38px;
     }
 
     .hero-card {
@@ -640,208 +595,10 @@ footer {
 
     .about {
         grid-template-columns: 1fr;
+        gap: 20px;
     }
 
     .nav-links {
         display: none;
     }
-}
-
-
-.roadmap-link {
-    color: #635bff;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.roadmap-link:hover {
-    text-decoration: underline;
-}
-
-
-/* ==========================================
-   SKILL TAG INPUT
-   ========================================== */
-
-.tag-input-container {
-    position: relative;
-
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-
-    gap: 8px;
-
-    min-height: 52px;
-
-    padding: 8px 12px;
-
-    border: 1px solid #d1d5db;
-
-    border-radius: 10px;
-
-    background: white;
-
-    cursor: text;
-}
-
-
-.tag-input-container:focus-within {
-    border-color: #635bff;
-
-    box-shadow: 0 0 0 3px rgba(99, 91, 255, 0.1);
-}
-
-
-#skillTags {
-    display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 8px;
-}
-
-
-.skill-input-tag {
-    display: inline-flex;
-
-    align-items: center;
-
-    gap: 6px;
-
-    padding: 6px 10px;
-
-    border-radius: 20px;
-
-    background: #635bff;
-
-    color: white;
-
-    font-size: 14px;
-
-    font-weight: 500;
-}
-
-
-.skill-input-tag button {
-    border: none;
-
-    background: none;
-
-    color: white;
-
-    font-size: 18px;
-
-    cursor: pointer;
-
-    padding: 0;
-
-    line-height: 1;
-}
-
-
-#skillInput {
-    flex: 1;
-
-    min-width: 150px;
-
-    border: none;
-
-    outline: none;
-
-    font-size: 15px;
-
-    padding: 7px;
-}
-
-
-/* ==========================================
-   AUTOCOMPLETE SUGGESTIONS
-   ========================================== */
-
-.suggestions {
-    position: absolute;
-
-    top: calc(100% + 5px);
-
-    left: 0;
-
-    right: 0;
-
-    background: white;
-
-    border: 1px solid #ddd;
-
-    border-radius: 10px;
-
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-
-    overflow: hidden;
-
-    z-index: 100;
-
-    display: none;
-}
-
-
-.suggestion-item {
-    padding: 12px 15px;
-
-    cursor: pointer;
-
-    font-size: 15px;
-}
-
-
-.suggestion-item:hover {
-    background: #f3f4f6;
-}
-
-
-.form-group small {
-    display: block;
-
-    margin-top: 7px;
-
-    color: #777;
-
-    font-size: 13px;
-}
-
-
-.roadmap-header {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 6px;
-}
-
-.roadmap-meta {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 10px;
-}
-
-.badge {
-    display: inline-block;
-    padding: 3px 10px;
-    border-radius: 12px;
-    font-size: 0.75rem;
-    font-weight: 600;
-}
-
-.badge.category { background: #eef2ff; color: #4338ca; }
-.badge.priority-high { background: #fef2f2; color: #dc2626; }
-.badge.priority-medium { background: #fff7ed; color: #c2410c; }
-.badge.priority-low { background: #f1f5f9; color: #475569; }
-
-.badge.difficulty-beginner { background: #f0fdf4; color: #15803d; }
-.badge.difficulty-intermediate { background: #eff6ff; color: #1d4ed8; }
-.badge.difficulty-advanced { background: #f3e8ff; color: #6b21a8; }
-
-.project-box{
-    padding: 5px;
-    margin-bottom: 15px;
 }
