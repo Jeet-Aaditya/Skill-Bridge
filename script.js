@@ -467,10 +467,7 @@ function analyzeSkills() {
     }
 
     // Check skills
-    if (selectedSkills.length === 0) {
-        alert("Please add at least one skill.");
-        return;
-    }
+    
 
     const requiredSkills = careers[career].skills;
 
