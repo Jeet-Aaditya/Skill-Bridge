@@ -105,21 +105,31 @@
 
             
             <div class="form-group">
+                <label>Skills You Have</label>
 
-                <label>Your Skills</label>
+                    <div class="tag-input-container" id="tagInputContainer">
 
-                <div class="skills-container" id="skillsContainer">
-                    
-                </div>
+                        <div id="skillTags"></div>
 
-            </div>
+                            <input
+                            type="text"
+                            id="skillInput"
+                            placeholder="Type a skill..."
+                            autocomplete="off"
+        >
 
-            <button class="analyze-btn" onclick="analyzeSkills()">
-                Analyze Skill Gap
-            </button>
+                    <div id="suggestions" class="suggestions"></div>
 
-        </div>
+                        </div>
 
+                            <small>
+                            Type a skill and press Enter to add it.
+                            </small>
+                        </div>
+
+                        <button onclick="analyzeSkills()" class="analyze-btn">
+                        Analyze Skill Gap
+                        </button>
     </section>
 
 
