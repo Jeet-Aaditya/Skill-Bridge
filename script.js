@@ -119,6 +119,193 @@ const skillAliases = {
 };
 
 
+// ==========================================
+// SKILL TAG INPUT
+// ==========================================
+
+const allSkills = [
+    "Java",
+    "Python",
+    "C",
+    "C++",
+    "C#",
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "React",
+    "Git",
+    "GitHub",
+    "SQL",
+    "Excel",
+    "Power BI",
+    "Statistics",
+    "Data Visualization",
+    "Machine Learning",
+    "NumPy",
+    "Pandas",
+    "TensorFlow",
+    "Networking",
+    "Linux",
+    "Cybersecurity Fundamentals",
+    "SIEM",
+    "Cryptography",
+    "Responsive Design"
+];
+
+let selectedSkills = [];
+
+const skillInput = document.getElementById("skillInput");
+const skillTags = document.getElementById("skillTags");
+const suggestions = document.getElementById("suggestions");
+
+
+// ==========================================
+// TYPING
+// ==========================================
+
+skillInput.addEventListener("input", function () {
+
+    const value = skillInput.value.trim().toLowerCase();
+
+    suggestions.innerHTML = "";
+
+    if (value === "") {
+        suggestions.style.display = "none";
+        return;
+    }
+
+    const matches = allSkills.filter(skill =>
+
+        skill.toLowerCase().includes(value) &&
+        !selectedSkills.includes(skill)
+
+    );
+
+    if (matches.length === 0) {
+        suggestions.style.display = "none";
+        return;
+    }
+
+    matches.forEach(skill => {
+
+        const suggestion = document.createElement("div");
+
+        suggestion.className = "suggestion-item";
+
+        suggestion.textContent = skill;
+
+        suggestion.addEventListener("click", function () {
+
+            addSkill(skill);
+
+        });
+
+        suggestions.appendChild(suggestion);
+
+    });
+
+    suggestions.style.display = "block";
+});
+
+
+// ==========================================
+// ENTER KEY
+// ==========================================
+
+skillInput.addEventListener("keydown", function (event) {
+
+    if (event.key === "Enter") {
+
+        event.preventDefault();
+
+        const value = skillInput.value.trim();
+
+        if (value === "") return;
+
+        // Find matching skill
+        const match = allSkills.find(skill =>
+            skill.toLowerCase() === value.toLowerCase()
+        );
+
+        if (match) {
+
+            addSkill(match);
+
+        } else {
+
+            // Allow custom skills
+            addSkill(value);
+
+        }
+    }
+});
+
+
+// ==========================================
+// ADD SKILL
+// ==========================================
+
+function addSkill(skill) {
+
+    if (selectedSkills.includes(skill)) {
+        return;
+    }
+
+    selectedSkills.push(skill);
+
+    renderTags();
+
+    skillInput.value = "";
+
+    suggestions.innerHTML = "";
+
+    suggestions.style.display = "none";
+
+    skillInput.focus();
+}
+
+
+// ==========================================
+// DISPLAY TAGS
+// ==========================================
+
+function renderTags() {
+
+    skillTags.innerHTML = "";
+
+    selectedSkills.forEach((skill, index) => {
+
+        const tag = document.createElement("span");
+
+        tag.className = "skill-input-tag";
+
+        tag.innerHTML = `
+            ${skill}
+            <button onclick="removeSkill(${index})">
+                ×
+            </button>
+        `;
+
+        skillTags.appendChild(tag);
+
+    });
+}
+
+
+// ==========================================
+// REMOVE SKILL
+// ==========================================
+
+function removeSkill(index) {
+
+    selectedSkills.splice(index, 1);
+
+    renderTags();
+
+    skillInput.focus();
+}
+
+
 // ===============================
 // LEARNING ROADMAP
 // ===============================
@@ -273,51 +460,40 @@ function analyzeSkills() {
 
     const career = document.getElementById("career").value;
 
-    const skillsInput =
-        document.getElementById("skillsInput").value;
+    if (selectedSkills.length === 0) {
 
-    if (skillsInput.trim() === "") {
-
-        alert("Please enter at least one skill.");
+        alert("Please add at least one skill.");
 
         return;
     }
 
-
-    // Convert input into individual skills
-    const typedSkills = skillsInput
-        .split(",")
-        .map(skill => normalizeSkill(skill))
-        .filter(skill => skill !== "");
-
-
     const requiredSkills = careers[career].skills;
 
 
-    // Find matching skills
-    const skillsHave = requiredSkills.filter(requiredSkill => {
+    // Find skills the user has
+    const skillsHave = requiredSkills.filter(requiredSkill =>
 
-        return typedSkills.some(userSkill =>
+        selectedSkills.some(userSkill =>
 
             userSkill.toLowerCase() ===
             requiredSkill.toLowerCase()
 
-        );
+        )
 
-    });
+    );
 
 
     // Find missing skills
-    const missingSkills = requiredSkills.filter(requiredSkill => {
+    const missingSkills = requiredSkills.filter(requiredSkill =>
 
-        return !skillsHave.some(skill =>
+        !skillsHave.some(skill =>
 
             skill.toLowerCase() ===
             requiredSkill.toLowerCase()
 
-        );
+        )
 
-    });
+    );
 
 
     // Calculate readiness
@@ -326,18 +502,11 @@ function analyzeSkills() {
     );
 
 
-    // ===============================
-    // UPDATE READINESS SCORE
-    // ===============================
-
     document.getElementById("readinessScore").textContent =
         readiness + "%";
 
 
-    // ===============================
-    // SKILLS YOU HAVE
-    // ===============================
-
+    // Skills you have
     document.getElementById("skillsHave").innerHTML =
 
         skillsHave.length > 0
@@ -351,10 +520,7 @@ function analyzeSkills() {
         : "<p>No matching skills found.</p>";
 
 
-    // ===============================
-    // SKILLS YOU NEED
-    // ===============================
-
+    // Skills you need
     document.getElementById("skillsNeed").innerHTML =
 
         missingSkills.length > 0
@@ -368,10 +534,7 @@ function analyzeSkills() {
         : "<p>🎉 You have all the required skills!</p>";
 
 
-    // ===============================
-    // LEARNING ROADMAP
-    // ===============================
-
+    // Roadmap
     document.getElementById("roadmap").innerHTML =
 
         missingSkills.map((skill, index) => {
@@ -379,7 +542,6 @@ function analyzeSkills() {
             const info = learning[skill];
 
             return `
-
                 <div class="roadmap-card">
 
                     <div class="roadmap-number">
@@ -405,7 +567,6 @@ function analyzeSkills() {
 
                         ${
                             info?.url
-
                             ? `
                                 <a
                                     href="${info.url}"
@@ -415,27 +576,19 @@ function analyzeSkills() {
                                     ▶ Watch Tutorial
                                 </a>
                             `
-
                             : ""
                         }
 
                     </div>
 
                 </div>
-
             `;
 
         }).join("");
 
 
-    // ===============================
-    // SHOW RESULTS
-    // ===============================
-
     document.getElementById("results").style.display = "block";
 
-
-    // Scroll to results
     document.getElementById("results").scrollIntoView({
         behavior: "smooth"
     });
