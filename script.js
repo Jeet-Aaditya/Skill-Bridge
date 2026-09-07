@@ -45,6 +45,155 @@ const careers = {
             "SIEM",
             "Cryptography"
         ]
+    },
+
+    // ===== NEW CAREERS =====
+
+    devops: {
+        name: "DevOps Engineer",
+        skills: [
+            "Linux",
+            "Docker",
+            "Kubernetes",
+            "Git",
+            "AWS",
+            "CI/CD",
+            "Terraform",
+            "Python"
+        ]
+    },
+
+    design: {
+        name: "UX / UI Designer",
+        skills: [
+            "Figma",
+            "Wireframing",
+            "Prototyping",
+            "User Research",
+            "Usability Testing",
+            "Responsive Design"
+        ]
+    },
+
+    product: {
+        name: "Product Manager",
+        skills: [
+            "Agile",
+            "Roadmapping",
+            "Market Research",
+            "SQL",
+            "Data Visualization",
+            "Wireframing"
+        ]
+    },
+
+    mobile: {
+        name: "Mobile App Developer",
+        skills: [
+            "Kotlin",
+            "Swift",
+            "Flutter",
+            "React Native",
+            "Java",
+            "Git"
+        ]
+    },
+
+    datasci: {
+        name: "Data Scientist",
+        skills: [
+            "Python",
+            "Statistics",
+            "Machine Learning",
+            "Pandas",
+            "NumPy",
+            "SQL",
+            "Data Visualization"
+        ]
+    },
+
+    dataeng: {
+        name: "Data Engineer",
+        skills: [
+            "SQL",
+            "Python",
+            "ETL",
+            "Apache Spark",
+            "Data Warehousing",
+            "AWS"
+        ]
+    },
+
+    cloud: {
+        name: "Cloud Engineer",
+        skills: [
+            "AWS",
+            "Azure",
+            "Linux",
+            "Networking",
+            "Terraform",
+            "Docker"
+        ]
+    },
+
+    game: {
+        name: "Game Developer",
+        skills: [
+            "C++",
+            "C#",
+            "Unity",
+            "Unreal Engine",
+            "Game Design",
+            "3D Modeling"
+        ]
+    },
+
+    marketing: {
+        name: "Digital Marketing Specialist",
+        skills: [
+            "SEO",
+            "Google Analytics",
+            "Content Marketing",
+            "Social Media Marketing",
+            "Copywriting",
+            "Excel"
+        ]
+    },
+
+    qa: {
+        name: "QA / Test Automation Engineer",
+        skills: [
+            "Selenium",
+            "Python",
+            "Java",
+            "Test Automation",
+            "Manual Testing",
+            "Git"
+        ]
+    },
+
+    blockchain: {
+        name: "Blockchain Developer",
+        skills: [
+            "Solidity",
+            "Smart Contracts",
+            "Ethereum",
+            "JavaScript",
+            "Cryptography",
+            "Git"
+        ]
+    },
+
+    business: {
+        name: "Business Analyst",
+        skills: [
+            "SQL",
+            "Excel",
+            "Data Visualization",
+            "Requirements Gathering",
+            "Stakeholder Management",
+            "Statistics"
+        ]
     }
 };
 
@@ -115,7 +264,107 @@ const skillAliases = {
     "cryptography": "Cryptography",
 
     "linux os": "Linux",
-    "linux": "Linux"
+    "linux": "Linux",
+
+    // ===== NEW ALIASES =====
+
+    // DevOps / Cloud
+    "docker": "Docker",
+    "containers": "Docker",
+    "containerization": "Docker",
+
+    "k8s": "Kubernetes",
+    "kubernetes": "Kubernetes",
+
+    "aws": "AWS",
+    "amazon web services": "AWS",
+
+    "azure": "Azure",
+    "microsoft azure": "Azure",
+
+    "ci/cd": "CI/CD",
+    "cicd": "CI/CD",
+    "ci cd": "CI/CD",
+    "continuous integration": "CI/CD",
+    "continuous deployment": "CI/CD",
+
+    "terraform": "Terraform",
+    "iac": "Terraform",
+    "infrastructure as code": "Terraform",
+
+    // Design
+    "figma": "Figma",
+    "wireframes": "Wireframing",
+    "wireframing": "Wireframing",
+    "prototyping": "Prototyping",
+    "prototype": "Prototyping",
+    "user research": "User Research",
+    "ux research": "User Research",
+    "usability testing": "Usability Testing",
+    "usability": "Usability Testing",
+
+    // Product
+    "agile": "Agile",
+    "scrum": "Agile",
+    "roadmapping": "Roadmapping",
+    "roadmap": "Roadmapping",
+    "product roadmap": "Roadmapping",
+    "market research": "Market Research",
+
+    // Mobile
+    "kotlin": "Kotlin",
+    "swift": "Swift",
+    "flutter": "Flutter",
+    "dart": "Flutter",
+    "react native": "React Native",
+    "reactnative": "React Native",
+
+    // Data Engineering
+    "etl": "ETL",
+    "extract transform load": "ETL",
+    "spark": "Apache Spark",
+    "apache spark": "Apache Spark",
+    "pyspark": "Apache Spark",
+    "data warehousing": "Data Warehousing",
+    "data warehouse": "Data Warehousing",
+
+    // Game Dev
+    "unity": "Unity",
+    "unity3d": "Unity",
+    "unreal": "Unreal Engine",
+    "unreal engine": "Unreal Engine",
+    "game design": "Game Design",
+    "3d modeling": "3D Modeling",
+    "3d modelling": "3D Modeling",
+
+    // Marketing
+    "seo": "SEO",
+    "search engine optimization": "SEO",
+    "google analytics": "Google Analytics",
+    "ga4": "Google Analytics",
+    "content marketing": "Content Marketing",
+    "social media marketing": "Social Media Marketing",
+    "smm": "Social Media Marketing",
+    "copywriting": "Copywriting",
+
+    // QA
+    "selenium": "Selenium",
+    "test automation": "Test Automation",
+    "automation testing": "Test Automation",
+    "manual testing": "Manual Testing",
+    "qa testing": "Manual Testing",
+
+    // Blockchain
+    "solidity": "Solidity",
+    "smart contracts": "Smart Contracts",
+    "smart contract": "Smart Contracts",
+    "ethereum": "Ethereum",
+    "web3": "Ethereum",
+
+    // Business Analysis
+    "requirements gathering": "Requirements Gathering",
+    "business requirements": "Requirements Gathering",
+    "stakeholder management": "Stakeholder Management"
 };
 
 
@@ -149,7 +398,47 @@ const allSkills = [
     "Cybersecurity Fundamentals",
     "SIEM",
     "Cryptography",
-    "Responsive Design"
+    "Responsive Design",
+
+    // ===== NEW SKILLS =====
+    "Docker",
+    "Kubernetes",
+    "AWS",
+    "Azure",
+    "CI/CD",
+    "Terraform",
+    "Figma",
+    "Wireframing",
+    "Prototyping",
+    "User Research",
+    "Usability Testing",
+    "Agile",
+    "Roadmapping",
+    "Market Research",
+    "Kotlin",
+    "Swift",
+    "Flutter",
+    "React Native",
+    "ETL",
+    "Apache Spark",
+    "Data Warehousing",
+    "Unity",
+    "Unreal Engine",
+    "Game Design",
+    "3D Modeling",
+    "SEO",
+    "Google Analytics",
+    "Content Marketing",
+    "Social Media Marketing",
+    "Copywriting",
+    "Selenium",
+    "Test Automation",
+    "Manual Testing",
+    "Solidity",
+    "Smart Contracts",
+    "Ethereum",
+    "Requirements Gathering",
+    "Stakeholder Management"
 ];
 
 let selectedSkills = [];
@@ -415,6 +704,198 @@ const learning = {
     "Cryptography": {
         description: "Learn encryption, hashing and fundamental cryptography concepts.",
         url: "https://www.youtube.com/results?search_query=cryptography+for+beginners"
+    },
+
+    // ===== NEW LEARNING ENTRIES =====
+
+    "Docker": {
+        description: "Learn to containerize applications with Docker images and containers.",
+        url: "https://www.youtube.com/results?search_query=Docker+for+beginners"
+    },
+
+    "Kubernetes": {
+        description: "Learn to orchestrate, deploy and scale containers with Kubernetes.",
+        url: "https://www.youtube.com/results?search_query=Kubernetes+for+beginners"
+    },
+
+    "AWS": {
+        description: "Learn core AWS services like EC2, S3, IAM and cloud fundamentals.",
+        url: "https://www.youtube.com/results?search_query=AWS+for+beginners"
+    },
+
+    "Azure": {
+        description: "Learn core Microsoft Azure services and cloud fundamentals.",
+        url: "https://www.youtube.com/results?search_query=Azure+for+beginners"
+    },
+
+    "CI/CD": {
+        description: "Learn to build continuous integration and deployment pipelines.",
+        url: "https://www.youtube.com/results?search_query=CI+CD+pipeline+for+beginners"
+    },
+
+    "Terraform": {
+        description: "Learn infrastructure as code and automated provisioning with Terraform.",
+        url: "https://www.youtube.com/results?search_query=Terraform+for+beginners"
+    },
+
+    "Figma": {
+        description: "Learn to design interfaces and prototypes using Figma.",
+        url: "https://www.youtube.com/results?search_query=Figma+for+beginners"
+    },
+
+    "Wireframing": {
+        description: "Learn to sketch low-fidelity layouts and structure user interfaces.",
+        url: "https://www.youtube.com/results?search_query=wireframing+for+beginners"
+    },
+
+    "Prototyping": {
+        description: "Learn to build interactive prototypes to test design ideas.",
+        url: "https://www.youtube.com/results?search_query=UX+prototyping+for+beginners"
+    },
+
+    "User Research": {
+        description: "Learn to conduct interviews, surveys and usability studies to understand users.",
+        url: "https://www.youtube.com/results?search_query=UX+user+research+for+beginners"
+    },
+
+    "Usability Testing": {
+        description: "Learn to plan and run usability tests to evaluate designs.",
+        url: "https://www.youtube.com/results?search_query=usability+testing+for+beginners"
+    },
+
+    "Agile": {
+        description: "Learn Agile and Scrum principles for iterative product delivery.",
+        url: "https://www.youtube.com/results?search_query=Agile+Scrum+for+beginners"
+    },
+
+    "Roadmapping": {
+        description: "Learn to build and prioritize product roadmaps.",
+        url: "https://www.youtube.com/results?search_query=product+roadmap+for+beginners"
+    },
+
+    "Market Research": {
+        description: "Learn to analyze markets, competitors and customer needs.",
+        url: "https://www.youtube.com/results?search_query=market+research+for+beginners"
+    },
+
+    "Kotlin": {
+        description: "Learn Kotlin for native Android app development.",
+        url: "https://www.youtube.com/results?search_query=Kotlin+for+beginners"
+    },
+
+    "Swift": {
+        description: "Learn Swift for native iOS and macOS app development.",
+        url: "https://www.youtube.com/results?search_query=Swift+for+beginners"
+    },
+
+    "Flutter": {
+        description: "Learn Flutter and Dart to build cross-platform mobile apps.",
+        url: "https://www.youtube.com/results?search_query=Flutter+for+beginners"
+    },
+
+    "React Native": {
+        description: "Learn React Native to build cross-platform mobile apps with JavaScript.",
+        url: "https://www.youtube.com/results?search_query=React+Native+for+beginners"
+    },
+
+    "ETL": {
+        description: "Learn to build extract, transform and load pipelines for data systems.",
+        url: "https://www.youtube.com/results?search_query=ETL+pipelines+for+beginners"
+    },
+
+    "Apache Spark": {
+        description: "Learn Apache Spark for large-scale distributed data processing.",
+        url: "https://www.youtube.com/results?search_query=Apache+Spark+for+beginners"
+    },
+
+    "Data Warehousing": {
+        description: "Learn data warehouse design, modeling and management concepts.",
+        url: "https://www.youtube.com/results?search_query=data+warehousing+for+beginners"
+    },
+
+    "Unity": {
+        description: "Learn to build 2D and 3D games using the Unity engine.",
+        url: "https://www.youtube.com/results?search_query=Unity+game+development+for+beginners"
+    },
+
+    "Unreal Engine": {
+        description: "Learn to build high-fidelity games using Unreal Engine and Blueprints.",
+        url: "https://www.youtube.com/results?search_query=Unreal+Engine+for+beginners"
+    },
+
+    "Game Design": {
+        description: "Learn game design principles, mechanics and level design.",
+        url: "https://www.youtube.com/results?search_query=game+design+for+beginners"
+    },
+
+    "3D Modeling": {
+        description: "Learn 3D modeling fundamentals for games and animation.",
+        url: "https://www.youtube.com/results?search_query=3D+modeling+for+beginners"
+    },
+
+    "SEO": {
+        description: "Learn search engine optimization to improve site visibility and rankings.",
+        url: "https://www.youtube.com/results?search_query=SEO+for+beginners"
+    },
+
+    "Google Analytics": {
+        description: "Learn to track and analyze website traffic with Google Analytics.",
+        url: "https://www.youtube.com/results?search_query=Google+Analytics+for+beginners"
+    },
+
+    "Content Marketing": {
+        description: "Learn to plan and create content that attracts and engages audiences.",
+        url: "https://www.youtube.com/results?search_query=content+marketing+for+beginners"
+    },
+
+    "Social Media Marketing": {
+        description: "Learn to build and run marketing campaigns across social platforms.",
+        url: "https://www.youtube.com/results?search_query=social+media+marketing+for+beginners"
+    },
+
+    "Copywriting": {
+        description: "Learn to write persuasive, audience-focused marketing copy.",
+        url: "https://www.youtube.com/results?search_query=copywriting+for+beginners"
+    },
+
+    "Selenium": {
+        description: "Learn to automate browser testing with Selenium WebDriver.",
+        url: "https://www.youtube.com/results?search_query=Selenium+for+beginners"
+    },
+
+    "Test Automation": {
+        description: "Learn to design and build automated test suites and frameworks.",
+        url: "https://www.youtube.com/results?search_query=test+automation+for+beginners"
+    },
+
+    "Manual Testing": {
+        description: "Learn manual software testing techniques, test cases and bug reporting.",
+        url: "https://www.youtube.com/results?search_query=manual+testing+for+beginners"
+    },
+
+    "Solidity": {
+        description: "Learn Solidity to write smart contracts for Ethereum-based blockchains.",
+        url: "https://www.youtube.com/results?search_query=Solidity+for+beginners"
+    },
+
+    "Smart Contracts": {
+        description: "Learn how smart contracts work and how to design them securely.",
+        url: "https://www.youtube.com/results?search_query=smart+contracts+for+beginners"
+    },
+
+    "Ethereum": {
+        description: "Learn Ethereum and blockchain fundamentals for Web3 development.",
+        url: "https://www.youtube.com/results?search_query=Ethereum+blockchain+for+beginners"
+    },
+
+    "Requirements Gathering": {
+        description: "Learn to elicit, document and validate business requirements.",
+        url: "https://www.youtube.com/results?search_query=requirements+gathering+for+beginners"
+    },
+
+    "Stakeholder Management": {
+        description: "Learn to identify, engage and align stakeholders on a project.",
+        url: "https://www.youtube.com/results?search_query=stakeholder+management+for+beginners"
     }
 };
 
