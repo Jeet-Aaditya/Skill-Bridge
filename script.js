@@ -408,6 +408,38 @@ function analyzeSkills() {
         ? primaryNeed.map(skill => `<span class="skill-tag missing">${skill}</span>`).join("")
         : "<p class='empty'>🎉 You have all required skills!</p>";
 
+    // --- NEW: Calculate Best Career Matches Across ALL Careers ---
+    const allMatches = Object.keys(careers).map(key => {
+        const c = careers[key];
+        const matchScore = calculateReadiness(c.skills, selectedSkills);
+        const haveCount = c.skills.filter(reqSkill =>
+            selectedSkills.some(uSkill => normalizeSkill(uSkill.name).toLowerCase() === reqSkill.toLowerCase())
+        ).length;
+        return {
+            key,
+            name: c.name,
+            score: matchScore,
+            totalSkills: c.skills.length,
+            haveCount
+        };
+    });
+
+    // Sort descending by score
+    allMatches.sort((a, b) => b.score - a.score);
+
+    // Display Top 3 Matches (or top matches with > 0% readiness)
+    const matchesGrid = document.getElementById("careerMatchesGrid");
+    const topMatches = allMatches.slice(0, 3);
+
+    matchesGrid.innerHTML = topMatches.map((match, idx) => `
+        <div class="match-card ${match.key === primaryCareerKey ? 'current-target' : ''}">
+            <div class="match-badge">#${idx + 1} Match</div>
+            <h4>${match.name}</h4>
+            <div class="match-score">${match.score}%</div>
+            <p class="match-detail">Matches ${match.haveCount} of ${match.totalSkills} core skills</p>
+        </div>
+    `).join("");
+
     // Process Comparison Career if Selected
     const compSection = document.getElementById("comparisonSection");
     if (compareCareerKey && compareCareerKey !== primaryCareerKey) {
