@@ -644,3 +644,13 @@ footer {
         display: none;
     }
 }
+
+.input-invalid {
+    animation: shake 0.3s;
+    border-color: #ff4d4f !important;
+}
+
+@keyframes shake {
+    25% { transform: translateX(-4px); }
+    75% { transform: translateX(4px); }
+}

@@ -104,6 +104,29 @@ const skillInput = document.getElementById("skillInput");
 const skillTags = document.getElementById("skillTags");
 const suggestions = document.getElementById("suggestions");
 
+// Resolve whatever the user typed (including aliases like "js", "py")
+// to an official entry in allSkills. Returns null if there's no match,
+// so we can block anything that isn't one of our stored skills.
+function resolveToKnownSkill(rawValue) {
+    const cleaned = rawValue.trim().toLowerCase().replace(/[()]/g, "");
+    if (cleaned === "") return null;
+
+    if (skillAliases[cleaned]) {
+        return skillAliases[cleaned];
+    }
+
+    const directMatch = allSkills.find(skill =>
+        skill.toLowerCase() === cleaned
+    );
+
+    return directMatch || null;
+}
+
+function flashInvalidInput() {
+    skillInput.classList.add("input-invalid");
+    setTimeout(() => skillInput.classList.remove("input-invalid"), 400);
+}
+
 skillInput.addEventListener("input", function () {
     const value = skillInput.value.trim().toLowerCase();
     suggestions.innerHTML = "";
@@ -144,11 +167,15 @@ skillInput.addEventListener("keydown", function (event) {
         const value = skillInput.value.trim();
         if (value === "") return;
 
-        const match = allSkills.find(skill =>
-            skill.toLowerCase() === value.toLowerCase()
-        );
+        // Only ever add a skill that exists in our stored list
+        // (directly or via an alias). Anything else is rejected.
+        const knownSkill = resolveToKnownSkill(value);
 
-        addSkill(match || value);
+        if (knownSkill) {
+            addSkill(knownSkill);
+        } else {
+            flashInvalidInput();
+        }
     }
 });
 
